@@ -65,5 +65,67 @@
     "screenshots": [],
     "category": "web",
     "year": 2026
+  },
+  {
+    "id": "challenge-8",
+    "title": "Challenge 8 — RNGdex",
+    "subtitle": "Nagemaakte Pokedex (eerste schoolproject)",
+    "description": "Een zelfgemaakte Pokedex als eerste schoolproject. Bevat een Pokemondatabase met vang-systeem, gebruikersregistratie en login, admin-panel, en een random Pokemon generator. Gebouwd met PHP en MySQL. Niet afgerond, maar een leuke basis om verder aan te werken.",
+    "tags": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    "features": [
+      "Pokemondatabase met browse, zoek en vang-functionaliteit",
+      "Gebruikerssysteem met registratie, login, admin/user rollen",
+      "Random Pokemon generator",
+      "Admin-panel voor beheer"
+    ],
+    "techStack": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/challenge-8"
+    },
+    "screenshots": ["challenge-8.png"],
+    "category": "web",
+    "year": 2026
+  },
+  {
+    "id": "ow-heroes",
+    "title": "OWdex — Overwatch Hero Database",
+    "subtitle": "Verbeterde Pokedex met Overwatch characters",
+    "description": "Een verbeterde versie van de Pokedex, maar dan met Overwatch-helden. Volledig CRUD-systeem waarmee je helden kunt toevoegen, bewerken, bekijken en verwijderen. Inclusief admin-panel, random hero generator, en gestijlde Overwatch-thema interface.",
+    "tags": ["PHP", "MySQL", "HTML/CSS"],
+    "features": [
+      "CRUD-systeem voor Overwatch helden",
+      "Admin-panel voor beheer",
+      "Random Hero generator",
+      "Overwatch-thema design met Rajdhani/Barlow fonts",
+      "Uitbreidbaar met nieuwe data"
+    ],
+    "techStack": ["PHP", "MySQL", "HTML/CSS"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/OW_Heroe"
+    },
+    "screenshots": ["ow-heroes.png"],
+    "category": "web",
+    "year": 2026
+  },
+  {
+    "id": "skillssphere",
+    "title": "SkillsSphere",
+    "subtitle": "Quiz-gebaseerde match maker",
+    "description": "Een quiz-gebaseerde match maker: hoe beter je scoort op de quizzes, hoe beter je match. Gebouwd met Next.js, TypeScript en Supabase voor de backend. Moderne frontend-architectuur met een schaalbaar ontwerp.",
+    "tags": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "React"],
+    "features": [
+      "Quiz-systeem met score tracking",
+      "Match making algoritme op basis van quiz resultaten",
+      "Supabase backend voor data opslag",
+      "Moderne Next.js frontend met TypeScript",
+      "Tailwind CSS voor styling"
+    ],
+    "techStack": ["Next.js", "TypeScript", "React", "Supabase", "Tailwind CSS"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/skillssphere_FrontEnd"
+    },
+    "screenshots": [],
+    "category": "web",
+    "year": 2026
   }
 ]
