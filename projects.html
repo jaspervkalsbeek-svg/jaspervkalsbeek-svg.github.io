@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projecten – Jasper van Kalsbeek</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+<div class="container">
+  <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html" class="active">Projecten</a></li>
+  </ul>
+</div>
+</nav>
+
+<section class="project-list-header">
+<div class="container">
+  <h1>Projecten</h1>
+  <p>Een overzicht van projecten waar ik aan heb gewerkt</p>
+
+  <div class="toolbar">
+    <div class="search-wrapper">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Zoek projecten..." oninput="filterProjects()">
+    </div>
+    <div class="filter-group" id="categoryFilters">
+      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Alle</button>
+      <button class="filter-btn" data-filter="web" onclick="setFilter('web')">Web</button>
+      <button class="filter-btn" data-filter="tool" onclick="setFilter('tool')">Tools</button>
+      <button class="filter-btn" data-filter="other" onclick="setFilter('other')">Overig</button>
+    </div>
+    <div class="filter-group" id="techFilters"></div>
+  </div>
+
+  <div id="projectList"></div>
+
+  <div id="emptyState" class="empty-state glass" style="display:none">
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.3"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    <p>Geen projecten gevonden voor deze zoekopdracht.</p>
+  </div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+  <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
+</div>
+</footer>
+
+<script src="projects.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "foldersvergelijker",
+    "title": "FoldersVergelijker",
+    "subtitle": "Prijsvergelijkingsplatform voor NL en DE supermarkten",
+    "description": "Producten uit 22 Nederlandse en Duitse supermarkten worden automatisch verzameld via scrapers, vergeleken op prijs en getoond in een overzichtelijke interface. Inclusief prijs per eenheid (per 100g/kg/L), shopping list met PDF-export en een admin dashboard voor het beheren van scrapers.",
+    "tags": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "cURL", "FPDF", "PHPMailer"],
+    "features": [
+      "Data scraping via 3 methodes: Puppeteer (headless Chrome), kaufDA.de JSON-extractie, AlleFolders GraphQL API",
+      "9 actieve Puppeteer-extractors voor AH, Lidl NL, Aldi NL, Plus, Dirk, Rewe, Penny, Aldi Sud, Lidl DE",
+      "kaufDA.de scraper: PHP cURL met __NEXT_DATA__ JSON extractie voor 9 Duitse winkels",
+      "AlleFolders API: GraphQL voor 7 Nederlandse winkels",
+      "Prijs per eenheid (per 100g/kg/L) naast totaalprijs",
+      "Shopping list met autocomplete, email en PDF-generatie (FPDF + Gmail SMTP)",
+      "MariaDB database met 22 winkels, automatische imports via pipeline",
+      "Responsive public page met search, filters, sort, grid/list view"
+    ],
+    "techStack": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "HTML/CSS", "cURL", "FPDF", "PHPMailer", "MariaDB"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker"
+    },
+    "screenshots": ["public.png", "admin.png", "shopping-list.png", "public-mobile.png"],
+    "category": "web",
+    "year": 2026
+  },
+  {
+    "id": "portfolio",
+    "title": "Portfolio website",
+    "subtitle": "Persoonlijke portfolio op GitHub Pages",
+    "description": "Deze portfolio website. Gebouwd met statische HTML/CSS/JS, gehost op GitHub Pages. Donker thema met glass-morphism effecten, projectenoverzicht met zoek- en filterfunctionaliteit.",
+    "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    "features": [
+      "Donker thema met glass-morphism design",
+      "Responsive layout",
+      "Projectenpagina met zoeken en filteren op categorie en technologie",
+      "Gehost via GitHub Pages, automatische deploy bij push"
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io",
+      "site": "https://jaspervkalsbeek-svg.github.io"
+    },
+    "screenshots": ["portfolio.png"],
+    "category": "web",
+    "year": 2026
+  }
+]
