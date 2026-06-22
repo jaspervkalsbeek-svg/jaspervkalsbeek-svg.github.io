@@ -43,5 +43,27 @@
     "screenshots": ["portfolio.png"],
     "category": "web",
     "year": 2026
+  },
+  {
+    "id": "ticket",
+    "title": "Ticket",
+    "subtitle": "Ticketing- en eventsysteem met QR-code",
+    "description": "Een webapplicatie voor het beheren van evenementen en tickets, gebouwd met PHP en MySQL. Bevat een admin-panel, QR-code generatie en verificatie, e-mailnotificaties met QR-billage, meertalige ondersteuning, en een inlogsysteem met gebruikersrollen.",
+    "tags": ["PHP", "MySQL", "HTML/CSS", "JavaScript", "QR-code"],
+    "features": [
+      "QR-code generatie en randomizer voor tickets",
+      "Admin-panel voor evenementenbeheer",
+      "Inlogsysteem met gebruikersrollen",
+      "E-mailnotificaties met QR-billage",
+      "Meertalige ondersteuning",
+      "Database-gedreven ticketverkoop"
+    ],
+    "techStack": ["PHP", "MySQL", "JavaScript", "HTML/CSS", "C#"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/Ticket"
+    },
+    "screenshots": [],
+    "category": "web",
+    "year": 2026
   }
 ]
