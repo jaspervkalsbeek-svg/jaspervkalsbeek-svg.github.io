@@ -289,50 +289,6 @@ nav .nav-links a.active::after {
   position: relative;
 }
 
-/* --- Statement / Quote --- */
-.statement {
-  padding: 60px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
-}
-
-.quote {
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-}
-
-.quote p {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: var(--text);
-  line-height: 1.8;
-  letter-spacing: -0.01em;
-}
-
-.quote p::before {
-  content: '\201C';
-  display: block;
-  font-size: 4rem;
-  line-height: 1;
-  color: var(--accent);
-  opacity: 0.4;
-  margin-bottom: -16px;
-  font-style: normal;
-  font-family: Georgia, serif;
-}
-
-.quote footer {
-  margin-top: 20px;
-  font-size: 0.82rem;
-  font-family: var(--font);
-  color: var(--accent);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .section-header {
   margin-bottom: 48px;
 }
@@ -1098,8 +1054,6 @@ nav .nav-links a.active::after {
   .project-list-header { padding: 60px 0 24px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .section { padding: 50px 0; }
-  .statement { padding: 40px 0; }
-  .quote p { font-size: 1.05rem; }
   .about-hero-grid { flex-direction: column-reverse; text-align: center; }
   .about-hero-text h1 { font-size: 1.8rem; }
   .about-bio { margin-left: auto; margin-right: auto; }
