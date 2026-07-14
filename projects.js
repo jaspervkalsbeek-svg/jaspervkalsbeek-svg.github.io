@@ -88,8 +88,9 @@ function renderProjects() {
           ${(p.tags || []).map(t => `<span>${t}</span>`).join('')}
         </div>
         <div class="links" style="margin-top:12px">
-          ${p.links?.github ? `<a href="${p.links.github}" target="_blank">GitHub →</a>` : ''}
-          ${p.links?.site ? `<a href="${p.links.site}" target="_blank">Live site →</a>` : ''}
+          <a href="project.html?id=${p.id}">Bekijk project →</a>
+          ${p.links?.github ? `<a href="${p.links.github}" target="_blank" style="margin-left:12px">GitHub</a>` : ''}
+          ${p.links?.site ? `<a href="${p.links.site}" target="_blank" style="margin-left:12px">Live site</a>` : ''}
         </div>
       </div>
     </div>

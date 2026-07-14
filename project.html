@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project – Jasper van Kalsbeek</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="mouseGlow"></div>
+
+<nav>
+<div class="container">
+  <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="projects.html" class="active">Projecten</a></li>
+    <li><a href="about.html">Over mij</a></li>
+  </ul>
+</div>
+</nav>
+
+<section class="project-hero">
+<div class="container" id="projectContent">
+  <p style="color:var(--text-muted);font-family:var(--font);font-size:0.85rem;">Project laden...</p>
+</div>
+</section>
+
+<section class="section reveal" id="screenshotsSection" style="display:none">
+<div class="container">
+  <div class="section-header">
+    <h2>Screenshots</h2>
+    <p>Visueel overzicht van het project</p>
+  </div>
+  <div class="screenshot-gallery" id="screenshotGallery"></div>
+</div>
+</section>
+
+<section class="section reveal" id="featuresSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
+  <div class="section-header">
+    <h2>Features</h2>
+    <p>Wat het project kan</p>
+  </div>
+  <div class="feature-detail" id="featureList"></div>
+</div>
+</section>
+
+<section class="section reveal" id="techSection" style="display:none">
+<div class="container">
+  <div class="section-header">
+    <h2>Technologieën</h2>
+    <p>Gebruikte tech stack</p>
+  </div>
+  <div class="tech-stack-detail" id="techStack"></div>
+</div>
+</section>
+
+<section class="section reveal" id="descriptionSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
+  <div class="section-header">
+    <h2>Beschrijving</h2>
+    <p>Uitleg over het project</p>
+  </div>
+  <div id="projectDescription" style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;max-width:700px;"></div>
+</div>
+</section>
+
+<footer class="footer">
+<div class="container">
+  <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
+</div>
+</footer>
+
+<script src="scripts.js"></script>
+<script>
+(async function() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  if (!id) {
+    document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Geen project opgegeven. <a href="projects.html">Ga terug naar projecten.</a></p>';
+    return;
+  }
+
+  try {
+    const res = await fetch('data/projects.json');
+    const projects = await res.json();
+    const project = projects.find(p => p.id === id);
+
+    if (!project) {
+      document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Project niet gevonden. <a href="projects.html">Ga terug naar projecten.</a></p>';
+      return;
+    }
+
+    document.title = project.title + ' – Jasper van Kalsbeek';
+
+    const linksHtml = [];
+    if (project.links?.github) linksHtml.push(`<a href="${project.links.github}" class="btn btn-outline" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>`);
+    if (project.links?.site) linksHtml.push(`<a href="${project.links.site}" class="btn btn-primary" target="_blank">Live site</a>`);
+    linksHtml.push(`<a href="projects.html" class="btn btn-outline">← Alle projecten</a>`);
+
+    document.getElementById('projectContent').innerHTML = `
+      <p class="subtitle">${project.subtitle}</p>
+      <div class="project-meta">
+        <span>${project.year || '2026'}</span>
+        <span>${project.category || 'web'}</span>
+      </div>
+      <div class="tags">
+        ${(project.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
+      </div>
+      <div class="btn-group">
+        ${linksHtml.join('\n        ')}
+      </div>
+    `;
+
+    if (project.screenshots && project.screenshots.length > 0) {
+      document.getElementById('screenshotsSection').style.display = '';
+      document.getElementById('screenshotGallery').innerHTML = project.screenshots.map(s =>
+        `<img src="screenshots/${s}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'">`
+      ).join('');
+    }
+
+    if (project.features && project.features.length > 0) {
+      document.getElementById('featuresSection').style.display = '';
+      document.getElementById('featureList').innerHTML = `
+        <ul>
+          ${project.features.map(f => `<li>${f}</li>`).join('')}
+        </ul>
+      `;
+    }
+
+    if (project.techStack && project.techStack.length > 0) {
+      document.getElementById('techSection').style.display = '';
+      document.getElementById('techStack').innerHTML = project.techStack.map(t =>
+        `<span>${t}</span>`
+      ).join('');
+    }
+
+    if (project.description) {
+      document.getElementById('descriptionSection').style.display = '';
+      document.getElementById('projectDescription').innerHTML = `<p>${project.description}</p>`;
+    }
+
+  } catch (e) {
+    document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Kon project niet laden.</p>';
+  }
+})();
+</script>
+</body>
+</html>
