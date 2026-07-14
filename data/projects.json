@@ -1,5 +1,26 @@
 [
   {
+    "id": "arbo-adviesburo",
+    "title": "Arbo Adviesburo Van Kalsbeek",
+    "subtitle": "Bedrijfswebsite voor arbo-adviesbureau",
+    "description": "Professionele bedrijfswebsite voor een arbo-adviesbureau in Landgraaf. Gebouwd met statische HTML, CSS en JavaScript. Bevat een dynamisch systeem voor het delen van headers, footers en sidebars via een centraal component-bestand. De site toont 7 diensten met gedetailleerde subpagina's, een contactsectie en een overzichtelijke homepage.",
+    "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "features": [
+      "Centraal componentensysteem (header, footer, sidebar) via JavaScript injectie",
+      "7 dienstenpagina's met breadcrumbs, sidebars en contactkaarten",
+      "Donker thema met warme crèmekleur en gouden accenten",
+      "Responsive layout voor mobiel en desktop",
+      "Niet-technische taal, gericht op de klant",
+      "Google Fonts (DM Serif Display, DM Sans)",
+      "Actieve navigatie-state op basis van huidige pagina"
+    ],
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "links": {},
+    "screenshots": ["arbo-home.png", "arbo-dienst.png"],
+    "category": "web",
+    "year": 2026
+  },
+  {
     "id": "foldersvergelijker",
     "title": "FoldersVergelijker",
     "subtitle": "Prijsvergelijkingsplatform voor NL en DE supermarkten",

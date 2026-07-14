@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io#readme",
   "dependencies": {
-    "puppeteer": "^25.2.0"
+    "puppeteer": "^25.3.0"
   }
 }
