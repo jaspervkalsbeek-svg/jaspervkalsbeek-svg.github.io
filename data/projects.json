@@ -93,19 +93,21 @@
     "id": "challenge-8",
     "title": "Challenge 8 — RNGdex",
     "subtitle": "Nagemaakte Pokedex (eerste schoolproject)",
-    "description": "Een zelfgemaakte Pokedex als eerste schoolproject. Bevat een Pokemondatabase met vang-systeem, gebruikersregistratie en login, admin-panel, en een random Pokemon generator. Gebouwd met PHP en MySQL. Niet afgerond, maar een leuke basis om verder aan te werken.",
+    "description": "Een zelfgemaakte Pokedex als eerste schoolproject. Bevat een Pokemondatabase met vang-systeem, gebruikersregistratie en login, admin-panel, en een random Pokemon generator. Gebouwd met PHP en MySQL. Geüpgraded met security fixes: SQL injection preventie, admin authenticatie, XSS bescherming.",
     "tags": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
     "features": [
       "Pokemondatabase met browse, zoek en vang-functionaliteit",
       "Gebruikerssysteem met registratie, login, admin/user rollen",
       "Random Pokemon generator",
-      "Admin-panel voor beheer"
+      "Admin-panel voor beheer",
+      "SQL injection preventie (PDO prepared statements)",
+      "Admin authenticatie en autorisatie"
     ],
     "techStack": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/challenge-8"
+      "github": "https://github.com/Rebecca-Eerlingen/challenge-8"
     },
-    "screenshots": ["challenge-8.png"],
+    "screenshots": ["challenge-8-home.png", "challenge-8-cards.png", "challenge-8-login.png"],
     "category": "web",
     "year": 2026
   },
