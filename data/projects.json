@@ -124,7 +124,7 @@
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/OW_Heroe"
     },
-    "screenshots": ["ow-heroes.png"],
+    "screenshots": ["ow-heroes.png", "ow-heroes-detail.png"],
     "category": "web",
     "year": 2026
   },
