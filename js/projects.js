@@ -45,7 +45,8 @@ function setFilter(cat) {
 function setTech(tech) {
   activeTech = tech;
   document.querySelectorAll('#techFilters .filter-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent === tech);
+    const isAllBtn = b.textContent === 'Alle tech';
+    b.classList.toggle('active', tech === '' ? isAllBtn : b.textContent === tech);
   });
   renderProjects();
 }
@@ -77,7 +78,7 @@ function renderProjects() {
 
   empty.style.display = 'none';
   list.innerHTML = filtered.map(p => `
-    <div class="project-item glass glass-hover">
+    <div class="project-item">
       <img src="screenshots/${p.screenshots?.[0] || 'placeholder.png'}" alt="${p.title}" loading="lazy"
            onerror="this.style.display='none'">
       <div class="info">

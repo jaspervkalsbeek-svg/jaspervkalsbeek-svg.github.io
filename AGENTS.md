@@ -19,11 +19,13 @@ Persoonlijke portfolio website op GitHub Pages, met showcase van projecten.
 
 ## Belangrijke bestanden
 - `data/projects.json` – Alle projectdata (voeg hier nieuwe projecten toe)
-- `projects.js` – Filter/search logica
+- `js/projects.js` – Filter/search logica
+- `js/main.js` – Muisglow + scroll reveal
+- `css/style.css` – Alle styling
 - `index.html` – Homepage
 - `projects.html` – Projectenoverzicht
-- `style.css` – Alle styling
-- `scripts.js` – Muisglow + scroll reveal
+- `about.html` – CV/About pagina
+- `project.html` – Dynamische project detail pagina
 
 ## Laatste sessie (23 juni 2026)
 - Ticket, challenge-8, OWdex, SkillsSphere toegevoegd aan projects.json
