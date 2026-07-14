@@ -152,7 +152,7 @@
     "links": {
       "github": "https://github.com/Kyandro08/SkillsSphere_FrontEnd"
     },
-    "screenshots": ["skillssphere-home.png", "skillssphere-login.png", "skillssphere-dashboard.png", "skillssphere-quiz.png", "skillssphere-leaderboard.png"],
+    "screenshots": ["skillssphere-home.png", "skillssphere-dashboard.png", "skillssphere-quiz.png", "skillssphere-leaderboard.png", "skillssphere-friends.png", "skillssphere-notifications.png"],
     "category": "web",
     "year": 2026
   }
