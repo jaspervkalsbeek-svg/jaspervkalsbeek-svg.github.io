@@ -135,21 +135,24 @@
   {
     "id": "skillssphere",
     "title": "SkillsSphere",
-    "subtitle": "Quiz-gebaseerde match maker",
-    "description": "Een quiz-gebaseerde match maker: hoe beter je scoort op de quizzes, hoe beter je match. Gebouwd met Next.js, TypeScript en Supabase voor de backend. Moderne frontend-architectuur met een schaalbaar ontwerp.",
-    "tags": ["Next.js", "TypeScript", "Supabase", "Tailwind CSS", "React"],
+    "subtitle": "Quiz-gebaseerde skill tracker en matchmaker",
+    "description": "Een quiz-gebaseerde skill tracker en matchmaker voor studenten. Gebruikers kunnen skills testen via een meertraps-quiz systeem (Beginner → Intermediate → Expert), hun voortgang bijhouden, en verbinding maken met andere studenten. Gebouwd met Next.js 16, TypeScript en Supabase. Geüpgraded met server-side authenticatie, HMAC-signed sessions, httpOnly cookies en admin rol-controle.",
+    "tags": ["Next.js", "TypeScript", "Supabase", "React", "Tailwind CSS"],
     "features": [
-      "Quiz-systeem met score tracking",
-      "Match making algoritme op basis van quiz resultaten",
-      "Supabase backend voor data opslag",
-      "Moderne Next.js frontend met TypeScript",
-      "Tailwind CSS voor styling"
+      "Quiz-systeem met 3 moeilijkheidstracks per skill",
+      "Server-side authenticatie met HMAC-signed sessies",
+      "httpOnly + SameSite cookies (geen localStorage)",
+      "Admin-panel met server-side rol-controle",
+      "Skill tracking met level-systeem en voortgangsbalk",
+      "Netwerk-pagina met vriendenverzoeken",
+      "Leaderboard met rangorde en top-3 podium",
+      "Notificatiesysteem voor vriendenverzoeken"
     ],
     "techStack": ["Next.js", "TypeScript", "React", "Supabase", "Tailwind CSS"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/skillssphere_FrontEnd"
+      "github": "https://github.com/Kyandro08/SkillsSphere_FrontEnd"
     },
-    "screenshots": [],
+    "screenshots": ["skillssphere-home.png", "skillssphere-login.png", "skillssphere-dashboard.png", "skillssphere-quiz.png", "skillssphere-leaderboard.png"],
     "category": "web",
     "year": 2026
   }
