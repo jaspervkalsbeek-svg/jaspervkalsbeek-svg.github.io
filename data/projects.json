@@ -173,7 +173,7 @@
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/geoguessr"
     },
-    "screenshots": [],
+    "screenshots": ["geoguessr.png"],
     "category": "web",
     "year": 2026
   },
