@@ -155,5 +155,47 @@
     "screenshots": ["skillssphere-home.png", "skillssphere-dashboard.png", "skillssphere-quiz.png", "skillssphere-leaderboard.png", "skillssphere-friends.png", "skillssphere-notifications.png"],
     "category": "web",
     "year": 2026
+  },
+  {
+    "id": "geoguessr",
+    "title": "GeoGuessr",
+    "subtitle": "Locatie-guessing spel gebaseerd op Google Street View",
+    "description": "Een zelfgemaakte GeoGuessr-clone. De speler krijgt een willekeurige Google Street View-locatie te zien en moet raden waar ter wereld dit is. Gebouwd met HTML, CSS en JavaScript.",
+    "tags": ["JavaScript", "HTML", "CSS", "Google Maps API"],
+    "features": [
+      "Willekeurige Google Street View-locaties",
+      "Interactieve kaart voor het plaatsen van je gok",
+      "Afstandsberekening tussen gok en werkelijke locatie",
+      "Score systeem op basis van afstand",
+      "Responsive design"
+    ],
+    "techStack": ["JavaScript", "HTML", "CSS"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/geoguessr"
+    },
+    "screenshots": [],
+    "category": "web",
+    "year": 2026
+  },
+  {
+    "id": "eyelash-correction",
+    "title": "EyeLash Correction App",
+    "subtitle": "Gebaseerd op ML Kit face detection voor symmetrie-analyse",
+    "description": "Een Flutter-app die via de camera gezichten detecteert en de symmetrie van wimpers/wenkbrauwen analyseert. Gebruikt Google ML Kit voor face detection en toont een overlay-gids voor het corrigeren van asymmetrie. Gebouwd met Flutter, Dart en Google ML Kit.",
+    "tags": ["Flutter", "Dart", "Google ML Kit", "Camera"],
+    "features": [
+      "Real-time camera-feed met gezichtsdetectie",
+      "Google ML Kit face detection voor nauwkeurige landmark-detectie",
+      "Symmetrie-analyse van oogcontouren",
+      "Visuele overlay-gids voor correctie",
+      "Cross-platform (Android, iOS, Web, Desktop)"
+    ],
+    "techStack": ["Flutter", "Dart", "Google ML Kit", "Camera API"],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp"
+    },
+    "screenshots": ["flutter_01.png"],
+    "category": "mobile",
+    "year": 2026
   }
 ]
