@@ -173,7 +173,7 @@
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/geoguessr"
     },
-    "screenshots": ["GeoGuesserPointSystem.png"],
+    "screenshots": ["geoguessr.png", "GeoGuesserPointSystem.png"],
     "category": "web",
     "year": 2026
   },
