@@ -100,7 +100,8 @@
     ],
     "techStack": ["PHP", "MySQL", "JavaScript", "HTML/CSS", "C#"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/Ticket"
+      "github": "https://github.com/jaspervkalsbeek-svg/Ticket",
+      "docs": "https://github.com/jaspervkalsbeek-svg/Ticket/tree/main/docs"
     },
     "screenshots": ["ticket-home.webp", "ticket-festivals.webp", "ticket-order.webp"],
     "category": "web",
