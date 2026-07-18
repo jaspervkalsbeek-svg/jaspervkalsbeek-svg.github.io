@@ -1044,14 +1044,32 @@ nav .nav-links a.active::after {
 }
 
 /* Process detail (approach, role, testing, learned) */
-.process-detail {
-  max-width: 700px;
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
 }
 
-.process-detail p {
-  font-size: 0.88rem;
+.process-card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.process-card h3 {
+  font-family: var(--font);
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+
+.process-card p {
+  font-size: 0.84rem;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.65;
   font-family: var(--font);
 }
 
@@ -1090,6 +1108,7 @@ nav .nav-links a.active::after {
   .about-two-col { grid-template-columns: 1fr; gap: 32px; }
   .project-hero h1 { font-size: 1.6rem; }
   .screenshot-gallery { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
 }
 

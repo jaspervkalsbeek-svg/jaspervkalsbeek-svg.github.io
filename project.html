@@ -72,43 +72,30 @@
 </div>
 </section>
 
-<section class="section reveal" id="approachSection" style="display:none">
+<section class="section reveal" id="processSection" style="display:none">
 <div class="container">
   <div class="section-header">
-    <h2>Aanpak</h2>
-    <p>Hoe ik het project heb aangepakt</p>
+    <h2>Proces</h2>
+    <p>Aanpak, rol, testen en reflectie</p>
   </div>
-  <div class="process-detail" id="approachContent"></div>
-</div>
-</section>
-
-<section class="section reveal" id="roleSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div class="container">
-  <div class="section-header">
-    <h2>Mijn rol</h2>
-    <p>Wat mijn verantwoordelijkheid was</p>
+  <div class="process-grid">
+    <div class="process-card" id="approachCard" style="display:none">
+      <h3>Aanpak</h3>
+      <div id="approachContent"></div>
+    </div>
+    <div class="process-card" id="roleCard" style="display:none">
+      <h3>Mijn rol</h3>
+      <div id="roleContent"></div>
+    </div>
+    <div class="process-card" id="testingCard" style="display:none">
+      <h3>Testen</h3>
+      <div id="testingContent"></div>
+    </div>
+    <div class="process-card" id="learnedCard" style="display:none">
+      <h3>Wat ik heb geleerd</h3>
+      <div id="learnedContent"></div>
+    </div>
   </div>
-  <div class="process-detail" id="roleContent"></div>
-</div>
-</section>
-
-<section class="section reveal" id="testingSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Testen</h2>
-    <p>Hoe ik de software heb getest</p>
-  </div>
-  <div class="process-detail" id="testingContent"></div>
-</div>
-</section>
-
-<section class="section reveal" id="learnedSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
-<div class="container">
-  <div class="section-header">
-    <h2>Wat ik heb geleerd</h2>
-    <p>Reflectie en verbeterpunten</p>
-  </div>
-  <div class="process-detail" id="learnedContent"></div>
 </div>
 </section>
 
@@ -190,23 +177,27 @@
       document.getElementById('projectDescription').innerHTML = `<p>${project.description}</p>`;
     }
 
+    if (project.approach || project.role || project.testing || project.learned) {
+      document.getElementById('processSection').style.display = '';
+    }
+
     if (project.approach) {
-      document.getElementById('approachSection').style.display = '';
+      document.getElementById('approachCard').style.display = '';
       document.getElementById('approachContent').innerHTML = `<p>${project.approach}</p>`;
     }
 
     if (project.role) {
-      document.getElementById('roleSection').style.display = '';
+      document.getElementById('roleCard').style.display = '';
       document.getElementById('roleContent').innerHTML = `<p>${project.role}</p>`;
     }
 
     if (project.testing) {
-      document.getElementById('testingSection').style.display = '';
+      document.getElementById('testingCard').style.display = '';
       document.getElementById('testingContent').innerHTML = `<p>${project.testing}</p>`;
     }
 
     if (project.learned) {
-      document.getElementById('learnedSection').style.display = '';
+      document.getElementById('learnedCard').style.display = '';
       document.getElementById('learnedContent').innerHTML = `<p>${project.learned}</p>`;
     }
 
