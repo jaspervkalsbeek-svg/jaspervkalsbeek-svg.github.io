@@ -199,7 +199,8 @@
     ],
     "techStack": ["JavaScript", "HTML", "CSS"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/geoguessr"
+      "github": "https://github.com/jaspervkalsbeek-svg/geoguessr",
+      "docs": "https://github.com/jaspervkalsbeek-svg/geoguessr/tree/alpha/docs"
     },
     "screenshots": ["geoguessr.webp", "GeoGuesserPointSystem.webp"],
     "category": "web",
