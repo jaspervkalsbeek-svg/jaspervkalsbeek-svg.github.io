@@ -15,7 +15,10 @@
       "Actieve navigatie-state op basis van huidige pagina"
     ],
     "techStack": ["HTML", "CSS", "JavaScript"],
-    "links": {},
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo",
+      "docs": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo/tree/main/docs"
+    },
     "screenshots": ["arbo-home.webp", "arbo-dienst.webp"],
     "category": "web",
     "year": 2026,
