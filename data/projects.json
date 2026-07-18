@@ -224,7 +224,8 @@
     ],
     "techStack": ["Flutter", "Dart", "Google ML Kit", "Camera API"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp"
+      "github": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp",
+      "docs": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp/tree/main/docs"
     },
     "screenshots": ["eyelash-correction.webp"],
     "category": "mobile",
