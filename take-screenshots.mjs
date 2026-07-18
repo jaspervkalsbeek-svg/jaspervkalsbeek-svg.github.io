@@ -2,8 +2,8 @@ import puppeteer from "puppeteer";
 import { writeFileSync } from "fs";
 
 const screenshots = [
-  { url: "http://localhost/challenge-8/public/index.php", name: "challenge-8.png" },
-  { url: "http://localhost/OW_heroes/public/index.php", name: "ow-heroes.png" },
+  { url: "http://localhost/challenge-8/public/index.php", name: "challenge-8.webp" },
+  { url: "http://localhost/OW_heroes/public/index.php", name: "ow-heroes.webp" },
 ];
 
 const browser = await puppeteer.launch({ headless: true });
