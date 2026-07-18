@@ -71,7 +71,8 @@
     "techStack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io",
-      "site": "https://jaspervkalsbeek-svg.github.io"
+      "site": "https://jaspervkalsbeek-svg.github.io",
+      "docs": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io/tree/main/docs"
     },
     "screenshots": ["portfolio.webp"],
     "category": "web",
