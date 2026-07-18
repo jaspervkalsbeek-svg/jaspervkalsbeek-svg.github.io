@@ -45,7 +45,8 @@
     ],
     "techStack": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "HTML/CSS", "cURL", "FPDF", "PHPMailer", "MariaDB"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker"
+      "github": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker",
+      "docs": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker/tree/main/docs"
     },
     "screenshots": ["foldersvergelijker-erd.svg", "public.webp", "admin.webp", "shopping-list.webp", "public-mobile.webp"],
     "category": "web",
