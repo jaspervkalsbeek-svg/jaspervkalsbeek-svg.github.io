@@ -4,10 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projecten – Jasper van Kalsbeek</title>
+<meta name="description" content="Overzicht van projecten van Jasper van Kalsbeek - webapplicaties, tools en meer. PHP, Node.js, JavaScript, Next.js.">
+<meta property="og:title" content="Projecten – Jasper van Kalsbeek">
+<meta property="og:description" content="Overzicht van projecten - webapplicaties, tools en meer.">
+<meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+<a href="#main" class="skip-link">Ga naar inhoud</a>
 
 <nav>
 <div class="container">
@@ -20,6 +26,7 @@
 </div>
 </nav>
 
+<main id="main">
 <section class="project-list-header">
 <div class="container">
   <h1>Projecten</h1>
@@ -28,7 +35,7 @@
   <div class="toolbar">
     <div class="search-wrapper">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Zoek projecten..." oninput="filterProjects()">
+      <input type="text" id="searchInput" placeholder="Zoek projecten..." oninput="filterProjects()" aria-label="Zoek projecten">
     </div>
     <div class="filter-group" id="categoryFilters">
       <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Alle</button>
@@ -47,6 +54,8 @@
   </div>
 </div>
 </section>
+
+</main>
 
 <footer class="footer">
 <div class="container">

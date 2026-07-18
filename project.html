@@ -4,11 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Project – Jasper van Kalsbeek</title>
+<meta name="description" content="Bekijk de details van dit project - screenshots, features, technologieën en beschrijving.">
+<meta property="og:type" content="article">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<a href="#main" class="skip-link">Ga naar inhoud</a>
 <div id="mouseGlow"></div>
 
 <nav>
@@ -22,6 +25,7 @@
 </div>
 </nav>
 
+<main id="main">
 <section class="project-hero">
 <div class="container" id="projectContent">
   <p style="color:var(--text-muted);font-family:var(--font);font-size:0.85rem;">Project laden...</p>
@@ -68,6 +72,48 @@
 </div>
 </section>
 
+<section class="section reveal" id="approachSection" style="display:none">
+<div class="container">
+  <div class="section-header">
+    <h2>Aanpak</h2>
+    <p>Hoe ik het project heb aangepakt</p>
+  </div>
+  <div class="process-detail" id="approachContent"></div>
+</div>
+</section>
+
+<section class="section reveal" id="roleSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
+  <div class="section-header">
+    <h2>Mijn rol</h2>
+    <p>Wat mijn verantwoordelijkheid was</p>
+  </div>
+  <div class="process-detail" id="roleContent"></div>
+</div>
+</section>
+
+<section class="section reveal" id="testingSection" style="display:none">
+<div class="container">
+  <div class="section-header">
+    <h2>Testen</h2>
+    <p>Hoe ik de software heb getest</p>
+  </div>
+  <div class="process-detail" id="testingContent"></div>
+</div>
+</section>
+
+<section class="section reveal" id="learnedSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="container">
+  <div class="section-header">
+    <h2>Wat ik heb geleerd</h2>
+    <p>Reflectie en verbeterpunten</p>
+  </div>
+  <div class="process-detail" id="learnedContent"></div>
+</div>
+</section>
+
+</main>
+
 <footer class="footer">
   <div class="container">
     <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
@@ -98,8 +144,8 @@
     document.title = project.title + ' – Jasper van Kalsbeek';
 
     const linksHtml = [];
-    if (project.links?.github) linksHtml.push(`<a href="${project.links.github}" class="btn btn-outline" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>`);
-    if (project.links?.site) linksHtml.push(`<a href="${project.links.site}" class="btn btn-primary" target="_blank">Live site</a>`);
+    if (project.links?.github) linksHtml.push(`<a href="${project.links.github}" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>`);
+    if (project.links?.site) linksHtml.push(`<a href="${project.links.site}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live site</a>`);
     linksHtml.push(`<a href="projects.html" class="btn btn-outline">← Alle projecten</a>`);
 
     document.getElementById('projectContent').innerHTML = `
@@ -142,6 +188,26 @@
     if (project.description) {
       document.getElementById('descriptionSection').style.display = '';
       document.getElementById('projectDescription').innerHTML = `<p>${project.description}</p>`;
+    }
+
+    if (project.approach) {
+      document.getElementById('approachSection').style.display = '';
+      document.getElementById('approachContent').innerHTML = `<p>${project.approach}</p>`;
+    }
+
+    if (project.role) {
+      document.getElementById('roleSection').style.display = '';
+      document.getElementById('roleContent').innerHTML = `<p>${project.role}</p>`;
+    }
+
+    if (project.testing) {
+      document.getElementById('testingSection').style.display = '';
+      document.getElementById('testingContent').innerHTML = `<p>${project.testing}</p>`;
+    }
+
+    if (project.learned) {
+      document.getElementById('learnedSection').style.display = '';
+      document.getElementById('learnedContent').innerHTML = `<p>${project.learned}</p>`;
     }
 
   } catch (e) {
