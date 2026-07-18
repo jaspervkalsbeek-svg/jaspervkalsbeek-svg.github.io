@@ -36,3 +36,19 @@
 
   els.forEach(el => observer.observe(el));
 })();
+
+// --- Screenshot lightbox ---
+(function() {
+  document.addEventListener('click', e => {
+    if (e.target.matches('.screenshot-gallery img')) {
+      const lb = document.createElement('div');
+      lb.className = 'lightbox';
+      lb.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}">`;
+      lb.addEventListener('click', () => lb.remove());
+      document.body.appendChild(lb);
+    }
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') document.querySelector('.lightbox')?.remove();
+  });
+})();

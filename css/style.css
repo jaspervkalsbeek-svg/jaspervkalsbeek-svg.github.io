@@ -1116,3 +1116,21 @@ nav .nav-links a.active::after {
   .stats { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 1.6rem; }
 }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
