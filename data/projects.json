@@ -146,7 +146,8 @@
     ],
     "techStack": ["PHP", "MySQL", "HTML/CSS"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/OW_Heroe"
+      "github": "https://github.com/jaspervkalsbeek-svg/OW_Heroe",
+      "docs": "https://github.com/jaspervkalsbeek-svg/OW_heroe/tree/main/docs"
     },
     "screenshots": ["ow-heroes.webp", "ow-heroes-detail.webp"],
     "category": "web",
