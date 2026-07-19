@@ -130,7 +130,7 @@
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/PokeDex"
     },
-    "screenshots": ["challenge-8-home.webp", "challenge-8-login.webp", "challenge-8-user-profile.webp", "challenge-8-admin-panel.webp"],
+    "screenshots": ["challenge-8-home.webp", "challenge-8-login.webp", "challenge-8-user-profile.webp", "challenge-8-user-pokemon.webp", "challenge-8-admin-panel.webp", "challenge-8-admin-pokemon.webp"],
     "category": "web",
     "year": 2026,
     "approach": "De vorige versie (PHP + MySQL) volledig herschreven naar Node.js + Express + sql.js. Eerst de database-ontwerp gemaakt met tabellen voor accounts, pokemon en caught_pokemon. Daarna de Express server opgezet met auth middleware (requireAuth, requireAdmin) en RESTful API endpoints. Frontend gebouwd als SPA-achtige HTML pagina's met vanilla JS. Security first aanpak: bcrypt voor wachtwoord hashing, httpOnly + SameSite cookies, prepared queries tegen SQL injection.",
