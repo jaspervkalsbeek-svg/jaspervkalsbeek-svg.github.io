@@ -128,7 +128,8 @@
     ],
     "techStack": ["Node.js", "Express", "sql.js", "bcryptjs", "express-session", "HTML/CSS", "JavaScript"],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/PokeDex"
+      "github": "https://github.com/jaspervkalsbeek-svg/PokeDex",
+      "docs": "https://github.com/jaspervkalsbeek-svg/PokeDex/tree/main/docs"
     },
     "screenshots": ["challenge-8-home.webp", "challenge-8-login.webp", "challenge-8-user-profile.webp", "challenge-8-user-pokemon.webp", "challenge-8-admin-panel.webp", "challenge-8-admin-pokemon.webp"],
     "category": "web",
