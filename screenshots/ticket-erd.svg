@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="'SF Mono','Fira Code',monospace">
+  <rect width="800" height="520" fill="#07070a"/>
+  <text x="400" y="35" text-anchor="middle" fill="#ff6b35" font-size="14" font-weight="600"># ERD - Ticket</text>
+  <text x="400" y="55" text-anchor="middle" fill="#6a6a7a" font-size="10">Ticketing- en eventsysteem met QR-code</text>
+
+  <!-- events -->
+  <rect x="40" y="85" width="200" height="180" rx="4" fill="#0d0d14" stroke="#1a1a28"/>
+  <rect x="40" y="85" width="200" height="28" rx="4" fill="#1a1a28"/>
+  <text x="140" y="104" text-anchor="middle" fill="#ff6b35" font-size="11" font-weight="600">events</text>
+  <line x1="40" y1="113" x2="240" y2="113" stroke="#1a1a28"/>
+  <text x="52" y="132" fill="#c8c8d0" font-size="10">id <tspan fill="#6a6a7a">INT PK</tspan></text>
+  <text x="52" y="150" fill="#c8c8d0" font-size="10">name <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="52" y="168" fill="#c8c8d0" font-size="10">date <tspan fill="#6a6a7a">DATETIME</tspan></text>
+  <text x="52" y="186" fill="#c8c8d0" font-size="10">location <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="52" y="204" fill="#c8c8d0" font-size="10">price <tspan fill="#6a6a7a">DECIMAL</tspan></text>
+  <text x="52" y="222" fill="#c8c8d0" font-size="10">description <tspan fill="#6a6a7a">TEXT</tspan></text>
+  <text x="52" y="240" fill="#c8c8d0" font-size="10">image <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="52" y="258" fill="#6a6a7a" font-size="9">Meertalig (NL/LI)</text>
+
+  <!-- users -->
+  <rect x="300" y="85" width="200" height="150" rx="4" fill="#0d0d14" stroke="#1a1a28"/>
+  <rect x="300" y="85" width="200" height="28" rx="4" fill="#1a1a28"/>
+  <text x="400" y="104" text-anchor="middle" fill="#ff6b35" font-size="11" font-weight="600">users</text>
+  <line x1="300" y1="113" x2="500" y2="113" stroke="#1a1a28"/>
+  <text x="312" y="132" fill="#c8c8d0" font-size="10">id <tspan fill="#6a6a7a">INT PK</tspan></text>
+  <text x="312" y="150" fill="#c8c8d0" font-size="10">name <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="312" y="168" fill="#c8c8d0" font-size="10">email <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="312" y="186" fill="#c8c8d0" font-size="10">password <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="312" y="204" fill="#c8c8d0" font-size="10">role <tspan fill="#6a6a7a">ENUM</tspan></text>
+  <text x="312" y="222" fill="#c8c8d0" font-size="10">lang <tspan fill="#6a6a7a">CHAR(2)</tspan></text>
+  <text x="312" y="238" fill="#6a6a7a" font-size="9">admin / user rollen</text>
+
+  <!-- tickets -->
+  <rect x="300" y="310" width="200" height="180" rx="4" fill="#0d0d14" stroke="#1a1a28"/>
+  <rect x="300" y="310" width="200" height="28" rx="4" fill="#1a1a28"/>
+  <text x="400" y="329" text-anchor="middle" fill="#ff6b35" font-size="11" font-weight="600">tickets</text>
+  <line x1="300" y1="338" x2="500" y2="338" stroke="#1a1a28"/>
+  <text x="312" y="357" fill="#c8c8d0" font-size="10">id <tspan fill="#6a6a7a">INT PK</tspan></text>
+  <text x="312" y="375" fill="#c8c8d0" font-size="10">event_id <tspan fill="#6a6a7a">INT FK</tspan></text>
+  <text x="312" y="393" fill="#c8c8d0" font-size="10">user_id <tspan fill="#6a6a7a">INT FK</tspan></text>
+  <text x="312" y="411" fill="#c8c8d0" font-size="10">qr_code <tspan fill="#6a6a7a">VARCHAR</tspan></text>
+  <text x="312" y="429" fill="#c8c8d0" font-size="10">purchased_at <tspan fill="#6a6a7a">TIMESTAMP</tspan></text>
+  <text x="312" y="447" fill="#c8c8d0" font-size="10">used <tspan fill="#6a6a7a">TINYINT</tspan></text>
+  <text x="312" y="465" fill="#c8c8d0" font-size="10">price_paid <tspan fill="#6a6a7a">DECIMAL</tspan></text>
+  <text x="312" y="483" fill="#6a6a7a" font-size="9">QR + randomizer + verificatie</text>
+
+  <!-- Relations -->
+  <rect x="570" y="85" width="200" height="140" rx="4" fill="#0d0d14" stroke="#1a1a28"/>
+  <rect x="570" y="85" width="200" height="28" rx="4" fill="#1a1a28"/>
+  <text x="670" y="104" text-anchor="middle" fill="#ff6b35" font-size="11" font-weight="600">Relaties + Security</text>
+  <line x1="570" y1="113" x2="770" y2="113" stroke="#1a1a28"/>
+  <text x="582" y="134" fill="#c8c8d0" font-size="10">events 1:N tickets</text>
+  <text x="582" y="154" fill="#c8c8d0" font-size="10">users 1:N tickets</text>
+  <text x="582" y="180" fill="#6a6a7a" font-size="9">Security fixes:</text>
+  <text x="582" y="196" fill="#6a6a7a" font-size="9">- LFI-preventie</text>
+  <text x="582" y="212" fill="#6a6a7a" font-size="9">- Server-side prijsvalidatie</text>
+
+  <!-- Arrows -->
+  <line x1="240" y1="170" x2="300" y2="365" stroke="#ff6b35" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="297,362 305,365 297,368" fill="#ff6b35" opacity="0.5"/>
+  <line x1="400" y1="235" x2="400" y2="310" stroke="#ff6b35" stroke-width="1.5" opacity="0.5"/>
+  <polygon points="397,307 400,315 403,307" fill="#ff6b35" opacity="0.5"/>
+
+  <text x="400" y="508" text-anchor="middle" fill="#6a6a7a" font-size="9">Jasper van Kalsbeek - Ticket Database Ontwerp - 2026</text>
+</svg>
