@@ -13,7 +13,7 @@ Persoonlijke portfolio website op GitHub Pages, met showcase van projecten.
 - **FoldersVergelijker** – Prijsvergelijkingsplatform NL/DE supermarkten. PHP + MySQL + Node.js scrapers.
 - **Portfolio** – Deze site. HTML/CSS/JS.
 - **Ticket** – Ticketing/eventsysteem met QR. PHP + MySQL + C#.
-- **Challenge 8** – Pokedex (schoolproject). PHP + MySQL.
+- **Challenge 8** – PokeDex met gebruikerssysteem en admin panel. Node.js + Express + sql.js.
 - **OWdex** – Overwatch Hero Database met CRUD. PHP + MySQL.
 - **SkillsSphere** – Quiz match maker. Next.js + TypeScript + Supabase.
 - **GeoGuessr** – Locatie-guessing spel. JavaScript + Google Maps API.

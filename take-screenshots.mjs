@@ -1,5 +1,4 @@
 import puppeteer from "puppeteer";
-import { writeFileSync } from "fs";
 
 const screenshots = [
   { url: "http://localhost/challenge-8/public/index.php", name: "challenge-8.webp" },

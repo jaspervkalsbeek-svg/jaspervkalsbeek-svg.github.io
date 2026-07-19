@@ -113,29 +113,30 @@
   },
   {
     "id": "challenge-8",
-    "title": "Challenge 8 — RNGdex",
-    "subtitle": "Nagemaakte Pokedex (eerste schoolproject)",
-    "description": "Een zelfgemaakte Pokedex als eerste schoolproject. Bevat een Pokemondatabase met vang-systeem, gebruikersregistratie en login, admin-panel, en een random Pokemon generator. Gebouwd met PHP en MySQL. Geüpgraded met security fixes: SQL injection preventie, admin authenticatie, XSS bescherming.",
-    "tags": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    "title": "Challenge 8 — PokeDex",
+    "subtitle": "Pokedex met gebruikerssysteem en admin panel",
+    "description": "Een volledig herschreven Pokedex webapplicatie met Node.js en Express. Bevat een Pokemondatabase met zoek- en sorteerfunctionaliteit, vang-systeem met cooldown, gebruikersregistratie en login met sessie-beheer, admin panel voor account- en Pokemonbeheer, en een profiel pagina met statistieken. Gebouwd met sql.js (SQLite) voor persistente opslag.",
+    "tags": ["Node.js", "Express", "sql.js", "bcryptjs", "JavaScript", "HTML/CSS"],
     "features": [
-      "Pokemondatabase met browse, zoek en vang-functionaliteit",
-      "Gebruikerssysteem met registratie, login, admin/user rollen",
-      "Random Pokemon generator",
-      "Admin-panel voor beheer",
-      "SQL injection preventie (PDO prepared statements)",
-      "Admin authenticatie en autorisatie"
+      "Pokemondatabase met zoeken en sorteren op naam/ID",
+      "Vang-systeem met 30 seconden cooldown",
+      "Gebruikerssysteem met registratie, login en sessie-beheer (httpOnly cookies)",
+      "Admin panel met CRUD voor accounts en Pokemon",
+      "Profiel pagina met vangst-statistieken",
+      "Minigame pagina",
+      "Privacybeleid, voorwaarden en contact pagina's"
     ],
-    "techStack": ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    "techStack": ["Node.js", "Express", "sql.js", "bcryptjs", "express-session", "HTML/CSS", "JavaScript"],
     "links": {
-      "github": "https://github.com/Rebecca-Eerlingen/challenge-8"
+      "github": "https://github.com/jaspervkalsbeek-svg/PokeDex"
     },
-    "screenshots": ["challenge-8-home.webp", "challenge-8-cards.webp", "challenge-8-login.webp"],
+    "screenshots": ["challenge-8-home.webp", "challenge-8-login.webp", "challenge-8-user-profile.webp", "challenge-8-admin-panel.webp"],
     "category": "web",
     "year": 2026,
-    "approach": "Eerste schoolproject, dus begonnen met het fundament: database-ontwerp voor Pokemon, gebruikers en vangsten. Samen met teamgenoot de taken verdeeld: ik richtte me op het gebruikerssysteem en het vang-systeem, teamgenoot op de Pokemon-database en weergave. Na de basisversie een security-review gedaan en SQL injection kwetsbaarheden ontdekt. Deze vervolgens gefixed met PDO prepared statements.",
-    "role": "Verantwoordelijk voor het gebruikerssysteem (registratie, login, rollen), het vang-systeem en de security fixes (SQL injection preventie met PDO prepared statements, admin authenticatie).",
-    "testing": "Gebruikerssysteem getest door registratie, login en logout te doorlopen met verschillende rollen (admin/user). Vang-systeem getest door Pokemon te vangen en te controleren of deze correct werden opgeslagen. SQL injection getest door kwaadaardige invoer in het zoekveld te proberen en te controleren of deze werd geblokkeerd na de fix. Admin-paneel getest op toegangscontrole.",
-    "learned": "Eerste ervaring met PHP en MySQL. Geleerd om een database te ontwerpen en CRUD-operaties uit te voeren. Belangrijkste les: na de eerste versie ontdekte ik dat mijn code kwetsbaar was voor SQL injection. Dit was een eyeopener en heeft mijn manier van programmeren veranderd - vanaf nu gebruik ik altijd prepared statements. Samenwerking verliep goed doordaken we taken duidelijk verdeelden (ik: gebruikerssysteem + vang-systeem, teamgenoot: Pokemon-database). Volgende keer zou ik eerder een security-review doen, niet pas na oplevering."
+    "approach": "De vorige versie (PHP + MySQL) volledig herschreven naar Node.js + Express + sql.js. Eerst de database-ontwerp gemaakt met tabellen voor accounts, pokemon en caught_pokemon. Daarna de Express server opgezet met auth middleware (requireAuth, requireAdmin) en RESTful API endpoints. Frontend gebouwd als SPA-achtige HTML pagina's met vanilla JS. Security first aanpak: bcrypt voor wachtwoord hashing, httpOnly + SameSite cookies, prepared queries tegen SQL injection.",
+    "role": "Eindverantwoordelijk voor het volledige project. Database ontwerp, backend (Express server, API endpoints, auth middleware), frontend (HTML/CSS/JS) en security architectuur zelf gerealiseerd.",
+    "testing": "Authenticatie getest: registratie, login, logout, sessie-validatie. Vang-systeem getest op cooldown logica (30 seconden). Admin panel getest op rol-gebaseerde toegang (admin vs user). CRUD-operaties getest voor zowel accounts als Pokemon. API endpoints getest op foutafhandeling (401, 403, 404, 409, 429).",
+    "learned": "Geleerd om een applicatie volledig te herbouwen met een andere tech stack (PHP naar Node.js). Belangrijkste les: sessie-beveiliging met httpOnly cookies is veiliger dan client-side token opslag. Ook geleerd om een cooldown-systeem te implementeren voor game mechanics. Door de herconstructie werd de codebase een stuk overzichtelijker en beter onderhoudbaar."
   },
   {
     "id": "ow-heroes",
