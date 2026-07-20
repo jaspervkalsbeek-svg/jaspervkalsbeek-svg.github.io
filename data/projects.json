@@ -35,7 +35,7 @@
     "tags": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "cURL", "FPDF", "PHPMailer"],
     "features": [
       "Data scraping via 3 methodes: Puppeteer (headless Chrome), kaufDA.de brochure API, AlleFolders GraphQL API",
-      "kaufDA.de scraper: PHP cURL naar publieke Bonial API (content-viewer-be.kaufda.de) — 185-433 offers per DE winkel, 8 winkels actief",
+      "kaufDA.de scraper: PHP cURL naar publieke Bonial API (content-viewer-be.kaufda.de) - 185-433 offers per DE winkel, 8 winkels actief",
       "AlleFolders API: GraphQL voor NL winkels",
       "Prijzen per eenheid (per 100g/kg/L) met fallback-extractie uit titel/beschrijving",
       "Shopping list met autocomplete, email en PDF-billage (FPDF + Gmail SMTP)",
@@ -113,7 +113,7 @@
   },
   {
     "id": "challenge-8",
-    "title": "Challenge 8 — PokeDex",
+    "title": "Challenge 8 - PokeDex",
     "subtitle": "Pokedex met gebruikerssysteem en admin panel",
     "description": "Een volledig herschreven Pokedex webapplicatie met Node.js en Express. Bevat een Pokemondatabase met zoek- en sorteerfunctionaliteit, vang-systeem met cooldown, gebruikersregistratie en login met sessie-beheer, admin panel voor account- en Pokemonbeheer, en een profiel pagina met statistieken. Gebouwd met sql.js (SQLite) voor persistente opslag.",
     "tags": ["Node.js", "Express", "sql.js", "bcryptjs", "JavaScript", "HTML/CSS"],
@@ -141,7 +141,7 @@
   },
   {
     "id": "ow-heroes",
-    "title": "OWdex — Overwatch Hero Database",
+    "title": "OWdex - Overwatch Hero Database",
     "subtitle": "Verbeterde Pokedex met Overwatch characters",
     "description": "Een verbeterde versie van de Pokedex, maar dan met Overwatch-helden. Volledig CRUD-systeem waarmee je helden kunt toevoegen, bewerken, bekijken en verwijderen. Inclusief admin-panel, random hero generator, en gestijlde Overwatch-thema interface.",
     "tags": ["PHP", "MySQL", "HTML/CSS"],
