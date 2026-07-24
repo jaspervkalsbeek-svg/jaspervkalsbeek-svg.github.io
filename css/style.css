@@ -56,19 +56,6 @@ a:hover {
   color: #ff8a5c;
 }
 
-/* --- Grid background --- */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-  z-index: 0;
-}
-
 /* --- Mouse glow (hero only) --- */
 #mouseGlow {
   position: fixed;
@@ -370,12 +357,6 @@ nav .nav-links a.active::after {
   letter-spacing: -0.01em;
 }
 
-.section-header h2::before {
-  content: '# ';
-  color: var(--accent);
-  opacity: 0.5;
-}
-
 .section-header p {
   color: var(--text-muted);
   font-size: 0.9rem;
@@ -600,12 +581,6 @@ nav .nav-links a.active::after {
   color: #e8e8f0;
   margin-bottom: 6px;
   font-family: var(--font);
-}
-
-.project-list-header h1::before {
-  content: '# ';
-  color: var(--accent);
-  opacity: 0.5;
 }
 
 .project-list-header > .container > p {
