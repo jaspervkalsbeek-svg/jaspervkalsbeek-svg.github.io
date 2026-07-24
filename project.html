@@ -23,10 +23,14 @@
 <nav>
 <div class="container">
   <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="projects.html" class="active">Projecten</a></li>
     <li><a href="about.html">Over mij</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
 </nav>
@@ -34,7 +38,7 @@
 <main id="main">
 <section class="project-hero">
 <div class="container" id="projectContent">
-  <p style="color:var(--text-muted);font-family:var(--font);font-size:0.85rem;">Project laden...</p>
+  <p class="loading-text">Project laden...</p>
 </div>
 </section>
 
@@ -48,7 +52,7 @@
 </div>
 </section>
 
-<section class="section reveal" id="featuresSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<section class="section section-alt reveal" id="featuresSection" style="display:none">
 <div class="container">
   <div class="section-header">
     <h2>Features</h2>
@@ -68,13 +72,13 @@
 </div>
 </section>
 
-<section class="section reveal" id="descriptionSection" style="display:none;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<section class="section section-alt reveal" id="descriptionSection" style="display:none">
 <div class="container">
   <div class="section-header">
     <h2>Beschrijving</h2>
     <p>Uitleg over het project</p>
   </div>
-  <div id="projectDescription" style="font-size:0.88rem;color:var(--text-muted);line-height:1.7;max-width:700px;"></div>
+  <div id="projectDescription" class="project-desc-text"></div>
 </div>
 </section>
 
@@ -110,7 +114,7 @@
 <footer class="footer">
   <div class="container">
     <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
-    <p style="margin-top:6px"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a> &middot; <a href="contact.html">Contact</a></p>
+    <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a> &middot; <a href="contact.html">Contact</a></p>
   </div>
 </footer>
 
@@ -120,7 +124,7 @@
   const params = new URLSearchParams(window.location.search);
   const id = params.get('id');
   if (!id) {
-    document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Geen project opgegeven. <a href="projects.html">Ga terug naar projecten.</a></p>';
+    document.getElementById('projectContent').innerHTML = '<p class="loading-text">Geen project opgegeven. <a href="projects.html">Ga terug naar projecten.</a></p>';
     return;
   }
 
@@ -130,7 +134,7 @@
     const project = projects.find(p => p.id === id);
 
     if (!project) {
-      document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Project niet gevonden. <a href="projects.html">Ga terug naar projecten.</a></p>';
+      document.getElementById('projectContent').innerHTML = '<p class="loading-text">Project niet gevonden. <a href="projects.html">Ga terug naar projecten.</a></p>';
       return;
     }
 
@@ -209,7 +213,7 @@
     }
 
   } catch (e) {
-    document.getElementById('projectContent').innerHTML = '<p style="color:var(--text-muted);font-family:var(--font)">Kon project niet laden.</p>';
+    document.getElementById('projectContent').innerHTML = '<p class="loading-text">Kon project niet laden.</p>';
   }
 })();
 </script>

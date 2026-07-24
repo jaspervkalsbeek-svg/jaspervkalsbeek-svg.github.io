@@ -77,6 +77,14 @@ a:hover {
   z-index: 1;
 }
 
+.container-narrow {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
 /* --- Navigation --- */
 nav {
   position: sticky;
@@ -759,6 +767,10 @@ nav .nav-links a.active::after {
   font-size: 0.8rem;
 }
 
+.project-item .links {
+  margin-top: 12px;
+}
+
 /* Empty state */
 .empty-state {
   text-align: center;
@@ -1238,6 +1250,40 @@ nav .nav-links a.active::after {
   display: flex;
   gap: 10px;
   justify-content: center;
+}
+
+/* --- Contact intro --- */
+.contact-intro {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+/* --- Project description text --- */
+.project-desc-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* --- Legal text (privacy, voorwaarden) --- */
+.legal-text {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.legal-text strong {
+  color: var(--text);
+}
+
+/* --- Loading text --- */
+.loading-text {
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 0.85rem;
 }
 
 .lightbox {
