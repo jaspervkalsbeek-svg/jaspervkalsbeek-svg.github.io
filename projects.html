@@ -1,80 +1,67 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projecten – Jasper van Kalsbeek</title>
-<meta name="description" content="Overzicht van projecten van Jasper van Kalsbeek - webapplicaties, tools en meer. PHP, Node.js, JavaScript, Next.js.">
-<meta property="og:title" content="Projecten – Jasper van Kalsbeek">
-<meta property="og:description" content="Overzicht van projecten - webapplicaties, tools en meer.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://jaspervkalsbeek-svg.github.io/projects.html">
-<meta property="og:image" content="https://jaspervkalsbeek-svg.github.io/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Projecten – Jasper van Kalsbeek">
-<meta name="twitter:description" content="Overzicht van projecten - webapplicaties, tools en meer.">
-<meta name="twitter:image" content="https://jaspervkalsbeek-svg.github.io/og-image.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecten - Jasper van Kalsbeek</title>
+    <meta name="description" content="Een overzicht van projecten gebouwd door Jasper van Kalsbeek.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
 
-<a href="#main" class="skip-link">Ga naar inhoud</a>
+    <nav aria-label="Hoofdnavigatie">
+        <div class="container">
+            <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projecten</a></li>
+                <li><a href="kwalificatie.html">Kwalificatie</a></li>
+                <li><a href="about.html">Over mij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
-<div class="container">
-  <a href="index.html" class="logo">jasper<span>.</span>dev</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html" class="active">Projecten</a></li>
-    <li><a href="about.html">Over mij</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-</nav>
+    <main id="main" class="section">
+        <div class="container">
+            <header class="section-header">
+                <h1>Projecten</h1>
+                <p>Van data-scrapers tot volledige webapplicaties.</p>
+            </header>
 
-<main id="main">
-<section class="project-list-header">
-<div class="container">
-  <h1>Projecten</h1>
-  <p>Een overzicht van projecten waar ik aan heb gewerkt</p>
+            <div class="toolbar">
+                <div class="search-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    <input type="text" id="searchInput" placeholder="Zoek projecten..." aria-label="Zoek projecten">
+                </div>
+                <div class="filter-group" id="categoryFilters">
+                    <!-- Dynamisch geladen -->
+                </div>
+            </div>
 
-  <div class="toolbar">
-    <div class="search-wrapper">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-      <input type="text" id="searchInput" placeholder="Zoek projecten..." oninput="filterProjects()" aria-label="Zoek projecten">
-    </div>
-    <div class="filter-group" id="categoryFilters">
-      <button class="filter-btn active" data-filter="all" onclick="setFilter('all')">Alle</button>
-      <button class="filter-btn" data-filter="web" onclick="setFilter('web')">Web</button>
-      <button class="filter-btn" data-filter="tool" onclick="setFilter('tool')">Tools</button>
-      <button class="filter-btn" data-filter="other" onclick="setFilter('other')">Overig</button>
-    </div>
-    <div class="filter-group" id="techFilters"></div>
-  </div>
+            <div id="projectList" class="project-list">
+                <!-- Dynamisch geladen -->
+            </div>
+        </div>
+    </main>
 
-  <div id="projectList" class="project-list"></div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
+            <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a></p>
+        </div>
+    </footer>
 
-  <div id="emptyState" class="empty-state" style="display:none">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity:0.3"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
-    <p>Geen projecten gevonden.</p>
-  </div>
-</div>
-</section>
-
-</main>
-
-<footer class="footer">
-<div class="container">
-  <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
-  <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a> &middot; <a href="contact.html">Contact</a></p>
-</div>
-</footer>
-
-<script src="js/projects.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/competencies.js"></script>
+    <script src="js/projects.js"></script>
 </body>
 </html>

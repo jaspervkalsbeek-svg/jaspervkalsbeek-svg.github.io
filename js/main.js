@@ -1,73 +1,40 @@
-// --- Mouse glow ---
-(function() {
-  const glow = document.getElementById('mouseGlow');
-  if (!glow) return;
+// --- Scroll Reveal ---
+document.addEventListener('DOMContentLoaded', () => {
+  const reveals = document.querySelectorAll('.reveal, .reveal-stagger');
 
-  let mx = 0, my = 0;
-  let gx = 0, gy = 0;
-
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-  });
-
-  function animate() {
-    gx += (mx - gx) * 0.05;
-    gy += (my - gy) * 0.05;
-    glow.style.left = gx + 'px';
-    glow.style.top = gy + 'px';
-    requestAnimationFrame(animate);
-  }
-  animate();
-})();
-
-// --- Mobile nav toggle ---
-(function() {
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-  if (!toggle || !links) return;
-
-  toggle.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-
-  links.addEventListener('click', e => {
-    if (e.target.matches('a')) {
-      links.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-
-// --- Scroll reveal ---
-(function() {
-  const els = document.querySelectorAll('.reveal');
-  if (!els.length) return;
-
-  const observer = new IntersectionObserver(entries => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0.1 });
 
-  els.forEach(el => observer.observe(el));
-})();
+  reveals.forEach(el => observer.observe(el));
+});
 
-// --- Screenshot lightbox ---
-(function() {
-  document.addEventListener('click', e => {
-    if (e.target.matches('.screenshot-gallery img')) {
-      const lb = document.createElement('div');
-      lb.className = 'lightbox';
-      lb.innerHTML = `<img src="${e.target.src}" alt="${e.target.alt}">`;
-      lb.addEventListener('click', () => lb.remove());
-      document.body.appendChild(lb);
-    }
+// --- Mobile Navigation ---
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.classList.toggle('active');
+    });
+  }
+});
+
+// --- Smooth anchor scroll ---
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') document.querySelector('.lightbox')?.remove();
-  });
-})();
+});

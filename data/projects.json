@@ -4,7 +4,12 @@
     "title": "Arbo Adviesburo Van Kalsbeek",
     "subtitle": "Bedrijfswebsite voor arbo-adviesbureau",
     "description": "Professionele bedrijfswebsite voor een arbo-adviesbureau in Landgraaf. Gebouwd met statische HTML, CSS en JavaScript. Bevat een dynamisch systeem voor het delen van headers, footers en sidebars via een centraal component-bestand. De site toont 7 diensten met gedetailleerde subpagina's, een contactsectie en een overzichtelijke homepage.",
-    "tags": ["HTML", "CSS", "JavaScript", "Responsive Design"],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design"
+    ],
     "features": [
       "Centraal componentensysteem (header, footer, sidebar) via JavaScript injectie",
       "7 dienstenpagina's met breadcrumbs, sidebars en contactkaarten",
@@ -14,12 +19,19 @@
       "Google Fonts (DM Serif Display, DM Sans)",
       "Actieve navigatie-state op basis van huidige pagina"
     ],
-    "techStack": ["HTML", "CSS", "JavaScript"],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo",
       "docs": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo/tree/main/docs"
     },
-    "screenshots": ["arbo-home.webp", "arbo-dienst.webp"],
+    "screenshots": [
+      "arbo-home.webp",
+      "arbo-dienst.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "In overleg met de klant (arbo-adviesbureau) de eisen en wensen in kaart gebracht. De website moest professioneel en toegankelijk zijn voor niet-technische gebruikers. Eerst een technisch ontwerp gemaakt met een componentensysteem zodat headers, footers en sidebars centraal beheerd worden. Daarna iteratief de pagina's gebouwd, beginnend bij de homepage en dienstenpagina's.",
@@ -32,7 +44,16 @@
     "title": "FoldersVergelijker",
     "subtitle": "Prijsvergelijkingsplatform voor NL en DE supermarkten",
     "description": "Producten uit 22 Nederlandse en Duitse supermarkten worden automatisch verzameld via scrapers, vergeleken op prijs en getoond in een overzichtelijke interface. Inclusief prijs per eenheid (per 100g/kg/L), shopping list met PDF-export en een admin dashboard voor het beheren van scrapers.",
-    "tags": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "cURL", "FPDF", "PHPMailer"],
+    "tags": [
+      "PHP",
+      "MySQL",
+      "Node.js",
+      "Puppeteer",
+      "JavaScript",
+      "cURL",
+      "FPDF",
+      "PHPMailer"
+    ],
     "features": [
       "Data scraping via 3 methodes: Puppeteer (headless Chrome), kaufDA.de brochure API, AlleFolders GraphQL API",
       "kaufDA.de scraper: PHP cURL naar publieke Bonial API (content-viewer-be.kaufda.de) - 185-433 offers per DE winkel, 8 winkels actief",
@@ -43,12 +64,29 @@
       "Responsive public page met search, filters, sort, grid/list view",
       "Admin dashboard met scraper UI, AJAX-endpoints en winkelbeheer"
     ],
-    "techStack": ["PHP", "MySQL", "Node.js", "Puppeteer", "JavaScript", "HTML/CSS", "cURL", "FPDF", "PHPMailer", "MariaDB"],
+    "techStack": [
+      "PHP",
+      "MySQL",
+      "Node.js",
+      "Puppeteer",
+      "JavaScript",
+      "HTML/CSS",
+      "cURL",
+      "FPDF",
+      "PHPMailer",
+      "MariaDB"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker",
       "docs": "https://github.com/jaspervkalsbeek-svg/foldersvergelijker/tree/main/docs"
     },
-    "screenshots": ["foldersvergelijker-erd.svg", "public.webp", "admin.webp", "shopping-list.webp", "public-mobile.webp"],
+    "screenshots": [
+      "foldersvergelijker-erd.svg",
+      "public.webp",
+      "admin.webp",
+      "shopping-list.webp",
+      "public-mobile.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Eerst een technisch ontwerp gemaakt: ERD voor de database (producten, prijzen, winkels, categorieeen - zie diagram), architectuur voor de scrapers (3 aparte methodes i.v.m. verschillende bronnen), en een publieke pagina + admin dashboard. Project opgesplitst in fases: (1) database en scrapers, (2) publieke pagina, (3) admin dashboard, (4) shopping list en PDF-export. Tussenfasen tussentijds opgeleverd en feedback opgehaald.",
@@ -61,20 +99,32 @@
     "title": "Portfolio website",
     "subtitle": "Persoonlijke portfolio op GitHub Pages",
     "description": "Deze portfolio website. Gebouwd met statische HTML/CSS/JS, gehost op GitHub Pages. Donker thema met glass-morphism effecten, projectenoverzicht met zoek- en filterfunctionaliteit.",
-    "tags": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages"
+    ],
     "features": [
       "Donker thema met glass-morphism design",
       "Responsive layout",
       "Projectenpagina met zoeken en filteren op categorie en technologie",
       "Gehost via GitHub Pages, automatische deploy bij push"
     ],
-    "techStack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "GitHub Pages"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io",
       "site": "https://jaspervkalsbeek-svg.github.io",
       "docs": "https://github.com/jaspervkalsbeek-svg/jaspervkalsbeek-svg.github.io/tree/main/docs"
     },
-    "screenshots": ["portfolio.webp"],
+    "screenshots": [
+      "portfolio.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Eerst nagedacht over de doelgroep (werkgevers, medestudenten) en welke indruk ik wil achterlaten. Technisch ontwerp: statische HTML/CSS/JS voor lage hostingkosten, JSON-data voor projecten zodat het onderhoudbaar is. Donker industrieel thema gekozen dat past bij mijn profiel. Iteratief uitgebreid met project detail pagina, zoek- en filterfunctionaliteit.",
@@ -87,7 +137,13 @@
     "title": "Ticket",
     "subtitle": "Ticketing- en eventsysteem met QR-code",
     "description": "Een webapplicatie voor het beheren van evenementen en tickets, gebouwd met PHP en MySQL. Bevat een admin-panel, QR-code generatie en verificatie, e-mailnotificaties met QR-billage, meertalige ondersteuning (NL/LI), beveiligingsfixes (LFI-preventie, server-side prijsvalidatie, admin authenticatie), en een inlogsysteem met gebruikersrollen.",
-    "tags": ["PHP", "MySQL", "HTML/CSS", "JavaScript", "QR-code"],
+    "tags": [
+      "PHP",
+      "MySQL",
+      "HTML/CSS",
+      "JavaScript",
+      "QR-code"
+    ],
     "features": [
       "QR-code generatie en randomizer voor tickets",
       "Admin-panel voor evenementenbeheer",
@@ -98,12 +154,22 @@
       "LFI-preventie en admin authenticatie",
       "Server-side prijsvalidatie"
     ],
-    "techStack": ["PHP", "MySQL", "JavaScript", "HTML/CSS", "C#"],
+    "techStack": [
+      "PHP",
+      "MySQL",
+      "JavaScript",
+      "HTML/CSS",
+      "C#"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/Ticket",
       "docs": "https://github.com/jaspervkalsbeek-svg/Ticket/tree/main/docs"
     },
-    "screenshots": ["ticket-home.webp", "ticket-festivals.webp", "ticket-order.webp"],
+    "screenshots": [
+      "ticket-home.webp",
+      "ticket-festivals.webp",
+      "ticket-order.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Samen met het projectteam de eisen van het ticketsysteem in kaart gebracht. Technisch ontwerp gemaakt met database-ontwerp voor evenementen, tickets en gebruikers. Mijn focus lag op het PHP-backend: ticketsysteem, QR-code integratie, e-mailnotificaties en beveiligingsfixes. Na de eerste oplevering een security-review uitgevoerd en kwetsbaarheden aangepakt (LFI, server-side validatie, admin authenticatie).",
@@ -116,7 +182,14 @@
     "title": "Challenge 8 - PokeDex",
     "subtitle": "Pokedex met gebruikerssysteem en admin panel",
     "description": "Een volledig herschreven Pokedex webapplicatie met Node.js en Express. Bevat een Pokemondatabase met zoek- en sorteerfunctionaliteit, vang-systeem met cooldown, gebruikersregistratie en login met sessie-beheer, admin panel voor account- en Pokemonbeheer, en een profiel pagina met statistieken. Gebouwd met sql.js (SQLite) voor persistente opslag.",
-    "tags": ["Node.js", "Express", "sql.js", "bcryptjs", "JavaScript", "HTML/CSS"],
+    "tags": [
+      "Node.js",
+      "Express",
+      "sql.js",
+      "bcryptjs",
+      "JavaScript",
+      "HTML/CSS"
+    ],
     "features": [
       "Pokemondatabase met zoeken en sorteren op naam/ID",
       "Vang-systeem met 30 seconden cooldown",
@@ -126,12 +199,27 @@
       "Minigame pagina",
       "Privacybeleid, voorwaarden en contact pagina's"
     ],
-    "techStack": ["Node.js", "Express", "sql.js", "bcryptjs", "express-session", "HTML/CSS", "JavaScript"],
+    "techStack": [
+      "Node.js",
+      "Express",
+      "sql.js",
+      "bcryptjs",
+      "express-session",
+      "HTML/CSS",
+      "JavaScript"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/PokeDex",
       "docs": "https://github.com/jaspervkalsbeek-svg/PokeDex/tree/main/docs"
     },
-    "screenshots": ["challenge-8-home.webp", "challenge-8-login.webp", "challenge-8-user-profile.webp", "challenge-8-user-pokemon.webp", "challenge-8-admin-panel.webp", "challenge-8-admin-pokemon.webp"],
+    "screenshots": [
+      "challenge-8-home.webp",
+      "challenge-8-login.webp",
+      "challenge-8-user-profile.webp",
+      "challenge-8-user-pokemon.webp",
+      "challenge-8-admin-panel.webp",
+      "challenge-8-admin-pokemon.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "De vorige versie (PHP + MySQL) volledig herschreven naar Node.js + Express + sql.js. Eerst de database-ontwerp gemaakt met tabellen voor accounts, pokemon en caught_pokemon. Daarna de Express server opgezet met auth middleware (requireAuth, requireAdmin) en RESTful API endpoints. Frontend gebouwd als SPA-achtige HTML pagina's met vanilla JS. Security first aanpak: bcrypt voor wachtwoord hashing, httpOnly + SameSite cookies, prepared queries tegen SQL injection.",
@@ -144,7 +232,11 @@
     "title": "OWdex - Overwatch Hero Database",
     "subtitle": "Verbeterde Pokedex met Overwatch characters",
     "description": "Een verbeterde versie van de Pokedex, maar dan met Overwatch-helden. Volledig CRUD-systeem waarmee je helden kunt toevoegen, bewerken, bekijken en verwijderen. Inclusief admin-panel, random hero generator, en gestijlde Overwatch-thema interface.",
-    "tags": ["PHP", "MySQL", "HTML/CSS"],
+    "tags": [
+      "PHP",
+      "MySQL",
+      "HTML/CSS"
+    ],
     "features": [
       "CRUD-systeem voor Overwatch helden",
       "Admin-panel voor beheer",
@@ -152,12 +244,19 @@
       "Overwatch-thema design met Rajdhani/Barlow fonts",
       "Uitbreidbaar met nieuwe data"
     ],
-    "techStack": ["PHP", "MySQL", "HTML/CSS"],
+    "techStack": [
+      "PHP",
+      "MySQL",
+      "HTML/CSS"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/OW_heroes",
       "docs": "https://github.com/jaspervkalsbeek-svg/OW_heroes/tree/main/docs"
     },
-    "screenshots": ["ow-heroes.webp", "ow-heroes-detail.webp"],
+    "screenshots": [
+      "ow-heroes.webp",
+      "ow-heroes-detail.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Na de ervaring met Challenge 8 wist ik wat er beter kon. Dit keer eerst een volledig CRUD-systeem ontworpen voordat ik begon met programmeren. Database-ontwerp met ERD voor helden, abilities en categorieeen. Bewust gekozen voor een Overwatch-thema om te laten zien dat ik design kan afstemmen op een specifieke context. Geleerd van de fouten uit Challenge 8 en direct prepared statements gebruikt.",
@@ -170,7 +269,13 @@
     "title": "SkillsSphere",
     "subtitle": "Quiz-gebaseerde skill tracker en matchmaker",
     "description": "Een quiz-gebaseerde skill tracker en matchmaker voor studenten. Gebruikers kunnen skills testen via een meertraps-quiz systeem (Beginner - Intermediate - Expert), hun voortgang bijhouden, en verbinding maken met andere studenten. Gebouwd met Next.js 16, TypeScript en Supabase. Geüpgraded met server-side authenticatie, HMAC-signed sessions, httpOnly cookies en admin rol-controle.",
-    "tags": ["Next.js", "TypeScript", "Supabase", "React", "Tailwind CSS"],
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "React",
+      "Tailwind CSS"
+    ],
     "features": [
       "Quiz-systeem met 3 moeilijkheidstracks per skill",
       "Server-side authenticatie met HMAC-signed sessies",
@@ -181,11 +286,24 @@
       "Leaderboard met rangorde en top-3 podium",
       "Notificatiesysteem voor vriendenverzoeken"
     ],
-    "techStack": ["Next.js", "TypeScript", "React", "Supabase", "Tailwind CSS"],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Supabase",
+      "Tailwind CSS"
+    ],
     "links": {
       "github": "https://github.com/Kyandro08/SkillsSphere_FrontEnd"
     },
-    "screenshots": ["skillssphere-home.webp", "skillssphere-dashboard.webp", "skillssphere-quiz.webp", "skillssphere-leaderboard.webp", "skillssphere-friends.webp", "skillssphere-notifications.webp"],
+    "screenshots": [
+      "skillssphere-home.webp",
+      "skillssphere-dashboard.webp",
+      "skillssphere-quiz.webp",
+      "skillssphere-leaderboard.webp",
+      "skillssphere-friends.webp",
+      "skillssphere-notifications.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Samen met teamgenoot de functionele eisen opgesteld en taken verdeeld. Ik richtte me op de authenticatie-architectuur en het quiz-systeem. Eerst een technisch ontwerp gemaakt voor de beveiligingslaag: HMAC-signed sessions, httpOnly cookies, server-side rol-controle. Daarna het quiz-systeem gebouwd met meerdere moeilijkheidsniveaus. Na de eerste oplevering een security-review uitgevoerd en de authenticatie verbeterd van client-side naar server-side.",
@@ -198,7 +316,12 @@
     "title": "GeoGuessr",
     "subtitle": "Locatie-guessing spel gebaseerd op Google Street View",
     "description": "Een zelfgemaakte GeoGuessr-clone. De speler krijgt een willekeurige Google Street View-locatie te zien en moet raden waar ter wereld dit is. Gebouwd met HTML, CSS en JavaScript.",
-    "tags": ["JavaScript", "HTML", "CSS", "Google Maps API"],
+    "tags": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Google Maps API"
+    ],
     "features": [
       "Willekeurige Google Street View-locaties",
       "Interactieve kaart voor het plaatsen van je gok",
@@ -206,12 +329,19 @@
       "Score systeem op basis van afstand",
       "Responsive design"
     ],
-    "techStack": ["JavaScript", "HTML", "CSS"],
+    "techStack": [
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/geoguessr",
       "docs": "https://github.com/jaspervkalsbeek-svg/geoguessr/tree/alpha/docs"
     },
-    "screenshots": ["geoguessr.webp", "GeoGuesserPointSystem.webp"],
+    "screenshots": [
+      "geoguessr.webp",
+      "GeoGuesserPointSystem.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Eerst de Google Maps API-documentatie bestudeerd om te begrijpen hoe Street View en de Maps JavaScript API werken. Technisch ontwerp: willekeurige coordinaten genereren, Street View embedden, kaart tonen voor het plaatsen van een gok, afstand berekenen met het Haversine-formulier. Eerst een werkende prototype gebouwd met basale functionaliteit, daarna uitgebreid met score-systeem en responsive design.",
@@ -220,11 +350,54 @@
     "learned": "Geleerd om te werken met een externe API (Google Maps JavaScript API). Geleerd om het Haversine-formulier te implementeren voor afstandsberekening op een boloppervlak. Ook geleerd om een spelmechanisme te ontwerpen met duidelijke feedback voor de gebruiker."
   },
   {
+    "id": "vankalsbeekdigital",
+    "title": "Van Kalsbeek Digital",
+    "subtitle": "Bedrijfswebsite voor eigen digital agency",
+    "description": "Eigen onderneming: Van Kalsbeek Digital bouwt websites, webapplicaties en data-gedreven tools op maat. De website dient als visitekaartje en portfolio, met een duidelijke dienststructuur (drie concepten: Minimum, Pro, Ultimate), werkwijze, en contactmogelijkheden. Van eerste idee tot productie.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsive Design"
+    ],
+    "features": [
+      "Donker thema met strakke, professionele uitstraling",
+      "Drie conceptniveaus (Minimum, Pro, Ultimate) met prijsindicatie",
+      "Stapsgewijze werkwijze (Bespreken, Bouwen, Live zetten)",
+      "Portfolio-sectie met doorverwijzing naar bestaande projecten",
+      "Contactsectie met e-mail, telefoon en locatie",
+      "Responsive layout voor mobiel, tablet en desktop",
+      "Privacy & voorwaarden pagina"
+    ],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "site": "https://vankalsbeekdigital.com"
+    },
+    "screenshots": [
+      "vankalsbeekdigital-home.webp"
+    ],
+    "category": "web",
+    "year": 2026,
+    "approach": "Eerst nagedacht over de positionering: wat bied ik aan, voor wie, en hoe presenteer ik dat duidelijk. De website moest professionaliteit uitstralen zonder overbodige tierelantijnen. Drie conceptniveaus gekozen zodat klanten direct zien wat er mogelijk is. De werkwijze stapsgewijs weergegeven om vertrouwen te kweken. Technisch ontwerp: statische HTML/CSS/JS voor snelle laadtijden en lage hostingkosten.",
+    "role": "Eindverantwoordelijk voor het volledige ontwerp, de realisatie en de bedrijfsvoering. Alle keuzes (positionering, design, techniek, content) zelf gemaakt.",
+    "testing": "Responsief getest op desktop, tablet en mobiel. Navigatie gecontroleerd op alle pagina's. Contactlinks (e-mail, telefoon) getest op correcte werking. Cross-browser getest in Chrome en Firefox. Laadtijden gecontroleerd.",
+    "learned": "Geleerd om niet alleen als developer te denken, maar ook als ondernemer: wat is de propositie, hoe presenteer ik mijn diensten, en hoe zorg ik dat een bezoeker weet wat hij kan verwachten. Het formuleren van drie conceptniveaus dwong om mijn diensten concreet te maken."
+  },
+  {
     "id": "eyelash-correction",
     "title": "EyeLash Correction App",
     "subtitle": "Gebaseerd op ML Kit face detection voor symmetrie-analyse",
     "description": "Een Flutter-app die via de camera gezichten detecteert en de symmetrie van wimpers/wenkbrauwen analyseert. Gebruikt Google ML Kit voor face detection en toont een overlay-gids voor het corrigeren van asymmetrie. Gebouwd met Flutter, Dart en Google ML Kit.",
-    "tags": ["Flutter", "Dart", "Google ML Kit", "Camera"],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Google ML Kit",
+      "Camera"
+    ],
     "features": [
       "Real-time camera-feed met gezichtsdetectie",
       "Google ML Kit face detection voor nauwkeurige landmark-detectie",
@@ -232,12 +405,19 @@
       "Visuele overlay-gids voor correctie",
       "Cross-platform (Android, iOS, Web, Desktop)"
     ],
-    "techStack": ["Flutter", "Dart", "Google ML Kit", "Camera API"],
+    "techStack": [
+      "Flutter",
+      "Dart",
+      "Google ML Kit",
+      "Camera API"
+    ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp",
       "docs": "https://github.com/jaspervkalsbeek-svg/EyeLashCorrectionApp/tree/main/docs"
     },
-    "screenshots": ["eyelash-correction.webp"],
+    "screenshots": [
+      "eyelash-correction.webp"
+    ],
     "category": "mobile",
     "year": 2026,
     "approach": "Eerst onderzocht welke framework het beste paste voor cross-platform face detection: Flutter met Google ML Kit bleek de beste optie. Technisch ontwerp: camera-feed onvangen, ML Kit face detection uitvoeren, facial landmarks extraheren, symmetrie berekenen tussen linker- en rechterkant, overlay-gids tonen. Eerst een prototype met basis face detection, daarna uitgebreid met symmetrie-analyse en visuele feedback.",

@@ -1,35 +1,30 @@
 let projects = [];
 let activeFilter = 'all';
-let activeTech = '';
 
 async function loadProjects() {
   try {
     const res = await fetch('data/projects.json');
     projects = await res.json();
+    buildCategoryFilters();
     renderProjects();
-    buildTechFilters();
   } catch (e) {
     document.getElementById('projectList').innerHTML =
-      '<div class="empty-state glass"><p>Kon projecten niet laden.</p></div>';
+      '<p style="color: var(--accent); text-align: center;">Kon projecten niet laden.</p>';
   }
 }
 
-function buildTechFilters() {
-  const tags = new Set();
-  projects.forEach(p => p.tags?.forEach(t => tags.add(t)));
-  const sorted = [...tags].sort();
-  const container = document.getElementById('techFilters');
+function buildCategoryFilters() {
+  const categories = new Set(['all']);
+  projects.forEach(p => categories.add(p.category));
+  const container = document.getElementById('categoryFilters');
   container.innerHTML = '';
-  const allBtn = document.createElement('button');
-  allBtn.className = 'filter-btn' + (activeTech === '' ? ' active' : '');
-  allBtn.textContent = 'Alle tech';
-  allBtn.onclick = () => setTech('');
-  container.appendChild(allBtn);
-  sorted.forEach(t => {
+  
+  categories.forEach(cat => {
     const btn = document.createElement('button');
-    btn.className = 'filter-btn' + (activeTech === t ? ' active' : '');
-    btn.textContent = t;
-    btn.onclick = () => setTech(t);
+    btn.className = 'filter-btn' + (activeFilter === cat ? ' active' : '');
+    btn.dataset.filter = cat;
+    btn.textContent = cat === 'all' ? 'Alle' : cat.charAt(0).toUpperCase() + cat.slice(1);
+    btn.onclick = () => setFilter(cat);
     container.appendChild(btn);
   });
 }
@@ -42,15 +37,6 @@ function setFilter(cat) {
   renderProjects();
 }
 
-function setTech(tech) {
-  activeTech = tech;
-  document.querySelectorAll('#techFilters .filter-btn').forEach(b => {
-    const isAllBtn = b.textContent === 'Alle tech';
-    b.classList.toggle('active', tech === '' ? isAllBtn : b.textContent === tech);
-  });
-  renderProjects();
-}
-
 function filterProjects() {
   renderProjects();
 }
@@ -58,11 +44,9 @@ function filterProjects() {
 function renderProjects() {
   const q = document.getElementById('searchInput').value.toLowerCase().trim();
   const list = document.getElementById('projectList');
-  const empty = document.getElementById('emptyState');
 
   const filtered = projects.filter(p => {
     if (activeFilter !== 'all' && p.category !== activeFilter) return false;
-    if (activeTech && (!p.tags || !p.tags.includes(activeTech))) return false;
     if (q) {
       const haystack = (p.title + ' ' + p.subtitle + ' ' + p.description + ' ' + (p.tags || []).join(' ')).toLowerCase();
       if (!haystack.includes(q)) return false;
@@ -71,31 +55,39 @@ function renderProjects() {
   });
 
   if (filtered.length === 0) {
-    list.innerHTML = '';
-    empty.style.display = 'block';
+    list.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">Geen projecten gevonden.</p>';
     return;
   }
 
-  empty.style.display = 'none';
-  list.innerHTML = filtered.map(p => `
-    <div class="project-item">
-      <img src="screenshots/${p.screenshots?.[0] || 'placeholder.png'}" alt="${p.title}" loading="lazy"
-           onerror="this.style.display='none'">
-      <div class="info">
+  list.innerHTML = filtered.map(p => {
+    const comps = detectCompetencies(p);
+    return `
+    <div class="project-card reveal">
+      <img src="screenshots/${p.screenshots?.[0] || 'placeholder.webp'}" alt="${p.title}" loading="lazy">
+      <div class="body">
         <h3>${p.title}</h3>
         <div class="meta">${p.subtitle}</div>
         <p>${p.description}</p>
-        <div class="tech">
+        <div class="tech-tags">
           ${(p.tags || []).map(t => `<span>${t}</span>`).join('')}
         </div>
-        <div class="links">
-          <a href="project.html?id=${p.id}">Bekijk project →</a>
-          ${p.links?.github ? `<a href="${p.links.github}" target="_blank" rel="noopener noreferrer" class="link-secondary">GitHub</a>` : ''}
-          ${p.links?.site ? `<a href="${p.links.site}" target="_blank" rel="noopener noreferrer" class="link-secondary">Live site</a>` : ''}
+        ${comps.length > 0 ? `
+        <div class="competency-badges">
+          ${comps.map(c => `<span class="competency-tag">${c}</span>`).join('')}
+        </div>
+        ` : ''}
+        <div style="margin-top: 24px;">
+          <a href="project.html?id=${p.id}" class="btn btn-outline" style="width: 100%; justify-content: center;">Bekijk details &rarr;</a>
         </div>
       </div>
     </div>
-  `).join('');
+    `;
+  }).join('');
+
+  // Re-trigger reveal animation for new items
+  document.querySelectorAll('.project-card.reveal').forEach(el => {
+    el.classList.add('visible');
+  });
 }
 
 document.addEventListener('DOMContentLoaded', loadProjects);

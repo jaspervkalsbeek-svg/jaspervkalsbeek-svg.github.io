@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwalificatiedossier - Jasper van Kalsbeek</title>
+    <meta name="description" content="Overzicht van het kwalificatiedossier Software developer (niveau 4) en welke projecten elke kerntaak demonstreren.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
+
+    <nav aria-label="Hoofdnavigatie">
+        <div class="container">
+            <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projecten</a></li>
+                <li><a href="kwalificatie.html" class="active">Kwalificatie</a></li>
+                <li><a href="about.html">Over mij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="hero" style="min-height: auto; padding: 160px 0 64px;">
+            <div class="container">
+                <h1>Kwalificatiedossier</h1>
+                <p class="subtitle">Software developer (mbo-niveau 4) — Crebonr. 25998</p>
+                <p style="max-width: 65ch;">Hieronder zie je per kerntaak en werkproces uit het kwalificatiedossier welke projecten het bewijs leveren. Elke sectie in een projectpagina is gekoppeld aan een specifiek werkproces.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="qual-overview" id="qualOverview">
+                    <!-- Dynamisch geladen -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
+            <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/competencies.js"></script>
+    <script>
+        const KERNTAKEN = [
+            {
+                id: 'B1-K1',
+                title: 'B1-K1: Realiseert software',
+                description: 'De beginnend beroepsbeoefenaar stemt af, ontwerpt, realiseert, test en verbetert software.',
+                werkprocessen: [
+                    { id: 'B1-K1-W1', title: 'W1: Stemt opdracht af, plant werkzaamheden en bewaakt de voortgang', description: 'Eisen en wensen afstemmen, doelen en planning vaststellen, voortgang bewaken.' },
+                    { id: 'B1-K1-W2', title: 'W2: Maakt een technisch ontwerp voor software', description: 'Alternatief ontwerp kiezen, ontwerp uitwerken, rekening houden met efficiëntie, toegankelijkheid, privacy en veiligheid.' },
+                    { id: 'B1-K1-W3', title: 'W3: Realiseert (onderdelen van) software', description: 'Code schrijven, integreren van assets, logica en structuur aanbrengen, voldoen aan code conventies.' },
+                    { id: 'B1-K1-W4', title: 'W4: Test software', description: 'Testscenario\'s maken, testvorm kiezen, tests uitvoeren, resultaten interpreteren en conclusies trekken.' },
+                    { id: 'B1-K1-W5', title: 'W5: Doet verbetervoorstellen voor de software', description: 'Wensen en testresultaten analyseren, verbetervoorstellen formuleren, afstemmen met belanghebbenden.' }
+                ]
+            },
+            {
+                id: 'B1-K2',
+                title: 'B1-K2: Voert ICT-projecten uit',
+                description: 'De beginnend beroepsbeoefenaar werkt samen in projectteams, presenteert werk en evalueert de samenwerking.',
+                werkprocessen: [
+                    { id: 'B1-K2-W1', title: 'W1: Werkt samen in een projectteam', description: 'Samenwerken met leidinggevende en team, informatie uitwisselen, ideeën aandragen, afspraken nakomen.' },
+                    { id: 'B1-K2-W2', title: 'W2: Presenteert het opgeleverde werk', description: 'Functionaliteiten uitleggen, vragen beantwoorden, verantwoording afleggen over gemaakte keuzes.' },
+                    { id: 'B1-K2-W3', title: 'W3: Evalueert de samenwerking', description: 'Reflecteren op eigen prestaties en het teamproces, feedback geven en ontvangen, doelen formuleren.' }
+                ]
+            }
+        ];
+
+        async function buildKwalificatie() {
+            const res = await fetch('data/projects.json');
+            const projects = await res.json();
+            const container = document.getElementById('qualOverview');
+
+            let html = '';
+
+            for (const kerntaak of KERNTAKEN) {
+                html += '<div class="qual-kerntaak">';
+                html += '<h2>' + kerntaak.title + '</h2>';
+                html += '<p>' + kerntaak.description + '</p>';
+                html += '<div class="qual-werkprocessen">';
+
+                for (const wp of kerntaak.werkprocessen) {
+                    const matchingProjects = projects.filter(p => detectCompetencies(p).includes(wp.id));
+
+                    html += '<div class="qual-werkproces">';
+                    html += '<div class="qual-wp-header">';
+                    html += '<span class="competency-tag">' + wp.id + '</span>';
+                    html += '<h3>' + wp.title + '</h3>';
+                    html += '</div>';
+                    html += '<p class="qual-wp-desc">' + wp.description + '</p>';
+
+                    if (matchingProjects.length > 0) {
+                        html += '<div class="qual-projects">';
+                        for (const p of matchingProjects) {
+                            const screenshot = p.screenshots && p.screenshots[0] ? p.screenshots[0] : '';
+                            html += '<a href="project.html?id=' + p.id + '" class="qual-project-card">';
+                            if (screenshot) {
+                                html += '<img src="screenshots/' + screenshot + '" alt="' + p.title + '" loading="lazy">';
+                            }
+                            html += '<div class="qual-project-info">';
+                            html += '<strong>' + p.title + '</strong>';
+                            html += '<span>' + p.subtitle + '</span>';
+                            html += '</div>';
+                            html += '</a>';
+                        }
+                        html += '</div>';
+                    } else {
+                        html += '<p class="qual-no-project">Geen specifiek project voor dit werkproces.</p>';
+                    }
+
+                    html += '</div>';
+                }
+
+                html += '</div>'; // close reveal-stagger
+                html += '</div>'; // close qual-kerntaak
+            }
+
+            container.innerHTML = html;
+        }
+
+        document.addEventListener('DOMContentLoaded', buildKwalificatie);
+    </script>
+</body>
+</html>

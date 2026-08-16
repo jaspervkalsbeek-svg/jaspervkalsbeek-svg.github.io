@@ -1,221 +1,170 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project – Jasper van Kalsbeek</title>
-<meta name="description" content="Bekijk de details van dit project - screenshots, features, technologieën en beschrijving.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://jaspervkalsbeek-svg.github.io/project.html">
-<meta property="og:image" content="https://jaspervkalsbeek-svg.github.io/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Project – Jasper van Kalsbeek">
-<meta name="twitter:description" content="Bekijk de details van dit project - screenshots, features, technologieën en beschrijving.">
-<meta name="twitter:image" content="https://jaspervkalsbeek-svg.github.io/og-image.png">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project – Jasper van Kalsbeek</title>
+    <meta name="description" content="Bekijk de details van dit project - screenshots, features, technologieën en beschrijving.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a href="#main" class="skip-link">Ga naar inhoud</a>
 
-<a href="#main" class="skip-link">Ga naar inhoud</a>
-<div id="mouseGlow"></div>
+    <nav aria-label="Hoofdnavigatie">
+        <div class="container">
+            <a href="index.html" class="logo">jasper<span>.</span>dev</a>
+            <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html" class="active">Projecten</a></li>
+                <li><a href="kwalificatie.html">Kwalificatie</a></li>
+                <li><a href="about.html">Over mij</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav>
-<div class="container">
-  <a href="index.html" class="logo">jasper<span>.</span>dev</a>
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="projects.html" class="active">Projecten</a></li>
-    <li><a href="about.html">Over mij</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
-</nav>
+    <main id="main">
+        <section class="project-hero" id="projectContent">
+            <div class="container">
+                <p style="color: var(--text-muted);">Project laden...</p>
+            </div>
+        </section>
 
-<main id="main">
-<section class="project-hero">
-<div class="container" id="projectContent">
-  <p class="loading-text">Project laden...</p>
-</div>
-</section>
+        <section class="project-screenshots section-alt" id="screenshotsSection" style="display:none">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Screenshots</h2>
+                </div>
+                <div id="screenshotGallery"></div>
+            </div>
+        </section>
 
-<section class="section reveal" id="screenshotsSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Screenshots</h2>
-    <p>Visueel overzicht van het project</p>
-  </div>
-  <div class="screenshot-gallery" id="screenshotGallery"></div>
-</div>
-</section>
+        <section class="project-features" id="featuresSection" style="display:none">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Features</h2>
+                </div>
+                <div id="featureList" class="features-grid"></div>
+            </div>
+        </section>
 
-<section class="section section-alt reveal" id="featuresSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Features</h2>
-    <p>Wat het project kan</p>
-  </div>
-  <div class="feature-detail" id="featureList"></div>
-</div>
-</section>
+        <section class="project-process section-alt" id="processSection" style="display:none">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Het Proces</h2>
+                    <p>Aanpak, rol, testen en reflectie — gekoppeld aan de kerntaken van het kwalificatiedossier</p>
+                </div>
+                <div id="processGrid" class="process-grid"></div>
+            </div>
+        </section>
+    </main>
 
-<section class="section reveal" id="techSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Technologieën</h2>
-    <p>Gebruikte tech stack</p>
-  </div>
-  <div class="tech-stack-detail" id="techStack"></div>
-</div>
-</section>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
+            <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a></p>
+        </div>
+    </footer>
 
-<section class="section section-alt reveal" id="descriptionSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Beschrijving</h2>
-    <p>Uitleg over het project</p>
-  </div>
-  <div id="projectDescription" class="project-desc-text"></div>
-</div>
-</section>
+    <script src="js/main.js"></script>
+    <script src="js/competencies.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+            const container = document.getElementById('projectContent').querySelector('.container');
 
-<section class="section reveal" id="processSection" style="display:none">
-<div class="container">
-  <div class="section-header">
-    <h2>Proces</h2>
-    <p>Aanpak, rol, testen en reflectie</p>
-  </div>
-  <div class="process-grid">
-    <div class="process-card" id="approachCard" style="display:none">
-      <h3>Aanpak</h3>
-      <div id="approachContent"></div>
-    </div>
-    <div class="process-card" id="roleCard" style="display:none">
-      <h3>Mijn rol</h3>
-      <div id="roleContent"></div>
-    </div>
-    <div class="process-card" id="testingCard" style="display:none">
-      <h3>Testen</h3>
-      <div id="testingContent"></div>
-    </div>
-    <div class="process-card" id="learnedCard" style="display:none">
-      <h3>Wat ik heb geleerd</h3>
-      <div id="learnedContent"></div>
-    </div>
-  </div>
-</div>
-</section>
+            if (!id) {
+                container.innerHTML = '<p>Geen project opgegeven. <a href="projects.html">Ga terug</a></p>';
+                return;
+            }
 
-</main>
+            try {
+                const res = await fetch('data/projects.json');
+                const projects = await res.json();
+                const project = projects.find(p => p.id === id);
 
-<footer class="footer">
-  <div class="container">
-    <p>&copy; 2026 Jasper van Kalsbeek &middot; <a href="https://github.com/jaspervkalsbeek-svg">GitHub</a></p>
-    <p class="footer-links"><a href="privacy.html">Privacybeleid</a> &middot; <a href="voorwaarden.html">Voorwaarden</a> &middot; <a href="contact.html">Contact</a></p>
-  </div>
-</footer>
+                if (!project) {
+                    container.innerHTML = '<p>Project niet gevonden. <a href="projects.html">Ga terug</a></p>';
+                    return;
+                }
 
-<script src="js/main.js"></script>
-<script>
-(async function() {
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
-  if (!id) {
-    document.getElementById('projectContent').innerHTML = '<p class="loading-text">Geen project opgegeven. <a href="projects.html">Ga terug naar projecten.</a></p>';
-    return;
-  }
+                document.title = project.title + ' – Jasper van Kalsbeek';
+                document.querySelector('meta[name="description"]').content = project.description;
 
-  try {
-    const res = await fetch('data/projects.json');
-    const projects = await res.json();
-    const project = projects.find(p => p.id === id);
+                container.innerHTML = `
+                    <a href="projects.html" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 2rem;">&larr; Projecten</a>
+                    <h1>${project.title}</h1>
+                    <p class="subtitle">${project.subtitle}</p>
+                    <div class="tech-tags" style="margin-bottom: 2rem;">
+                        ${(project.techStack || project.tags || []).map(t => '<span>' + t + '</span>').join('')}
+                    </div>
+                    <div class="btn-group" style="justify-content: flex-start;">
+                        ${project.links?.github ? '<a href="' + project.links.github + '" class="btn btn-outline" target="_blank" rel="noopener noreferrer">GitHub &rarr;</a>' : ''}
+                        ${project.links?.site ? '<a href="' + project.links.site + '" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live site</a>' : ''}
+                        ${project.links?.docs ? '<a href="' + project.links.docs + '" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Documentatie</a>' : ''}
+                        <a href="#processSection" class="btn btn-outline">Bekijk het proces &darr;</a>
+                    </div>
+                `;
 
-    if (!project) {
-      document.getElementById('projectContent').innerHTML = '<p class="loading-text">Project niet gevonden. <a href="projects.html">Ga terug naar projecten.</a></p>';
-      return;
-    }
+                if (project.screenshots?.length > 0) {
+                    document.getElementById('screenshotsSection').style.display = 'block';
+                    document.getElementById('screenshotGallery').innerHTML = project.screenshots.map(s =>
+                        '<div class="screenshot-item"><img src="screenshots/' + s + '" alt="Screenshot van ' + project.title + '" loading="lazy"></div>'
+                    ).join('');
+                }
 
-    document.title = project.title + ' – Jasper van Kalsbeek';
+                if (project.features?.length > 0) {
+                    document.getElementById('featuresSection').style.display = 'block';
+                    document.getElementById('featureList').innerHTML = project.features.map(f =>
+                        '<div class="feature-item"><p>' + f + '</p></div>'
+                    ).join('');
+                }
 
-    const linksHtml = [];
-    if (project.links?.github) linksHtml.push(`<a href="${project.links.github}" class="btn btn-outline" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>`);
-    if (project.links?.site) linksHtml.push(`<a href="${project.links.site}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Live site</a>`);
-    if (project.links?.docs) linksHtml.push(`<a href="${project.links.docs}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">📄 Ontwerp documenten</a>`);
-    linksHtml.push(`<a href="projects.html" class="btn btn-outline">← Alle projecten</a>`);
+                const comps = detectCompetencies(project);
+                const processItems = [
+                    { title: 'Aanpak & Planning', competency: 'B1-K1-W1', content: project.approach },
+                    { title: 'Mijn Rol', competency: comps.includes('B1-K2-W1') ? 'B1-K2-W1' : null, content: project.role },
+                    { title: 'Testen', competency: 'B1-K1-W4', content: project.testing },
+                    { title: 'Reflectie & Verbetering', competency: 'B1-K1-W5', content: project.learned }
+                ].filter(item => item.content);
 
-    document.getElementById('projectContent').innerHTML = `
-      <p class="subtitle">${project.subtitle}</p>
-      <div class="project-meta">
-        <span>${project.year || '2026'}</span>
-        <span>${project.category || 'web'}</span>
-      </div>
-      <div class="tags">
-        ${(project.tags || []).map(t => `<span class="tag">${t}</span>`).join('')}
-      </div>
-      <div class="btn-group">
-        ${linksHtml.join('\n        ')}
-      </div>
-    `;
+                // Add detected competencies as a summary
+                const compSummary = comps.map(c => {
+                    const labels = {
+                        'B1-K1-W1': 'Planning', 'B1-K1-W2': 'Ontwerp', 'B1-K1-W3': 'Realisatie',
+                        'B1-K1-W4': 'Testen', 'B1-K1-W5': 'Verbetering',
+                        'B1-K2-W1': 'Samenwerking', 'B1-K2-W2': 'Presentatie', 'B1-K2-W3': 'Evaluatie'
+                    };
+                    return '<span class="competency-tag">' + c + '</span>';
+                }).join('');
 
-    if (project.screenshots && project.screenshots.length > 0) {
-      document.getElementById('screenshotsSection').style.display = '';
-      document.getElementById('screenshotGallery').innerHTML = project.screenshots.map(s =>
-        `<img src="screenshots/${s}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'">`
-      ).join('');
-    }
+                if (processItems.length > 0) {
+                    document.getElementById('processSection').style.display = 'block';
+                    document.querySelector('#processSection .section-header').innerHTML =
+                        '<h2>Het Proces</h2>' +
+                        '<div class="competency-badges" style="justify-content: center; margin: 12px 0;">' + compSummary + '</div>' +
+                        '<p>Aanpak, rol, testen en reflectie</p>';
+                    document.getElementById('processGrid').innerHTML = processItems.map(item =>
+                        '<div class="process-card">' +
+                            (item.competency ? '<span class="competency-tag">' + item.competency + '</span>' : '') +
+                            '<h3>' + item.title + '</h3>' +
+                            '<p>' + item.content + '</p>' +
+                        '</div>'
+                    ).join('');
+                }
 
-    if (project.features && project.features.length > 0) {
-      document.getElementById('featuresSection').style.display = '';
-      document.getElementById('featureList').innerHTML = `
-        <ul>
-          ${project.features.map(f => `<li>${f}</li>`).join('')}
-        </ul>
-      `;
-    }
-
-    if (project.techStack && project.techStack.length > 0) {
-      document.getElementById('techSection').style.display = '';
-      document.getElementById('techStack').innerHTML = project.techStack.map(t =>
-        `<span>${t}</span>`
-      ).join('');
-    }
-
-    if (project.description) {
-      document.getElementById('descriptionSection').style.display = '';
-      document.getElementById('projectDescription').innerHTML = `<p>${project.description}</p>`;
-    }
-
-    if (project.approach || project.role || project.testing || project.learned) {
-      document.getElementById('processSection').style.display = '';
-    }
-
-    if (project.approach) {
-      document.getElementById('approachCard').style.display = '';
-      document.getElementById('approachContent').innerHTML = `<p>${project.approach}</p>`;
-    }
-
-    if (project.role) {
-      document.getElementById('roleCard').style.display = '';
-      document.getElementById('roleContent').innerHTML = `<p>${project.role}</p>`;
-    }
-
-    if (project.testing) {
-      document.getElementById('testingCard').style.display = '';
-      document.getElementById('testingContent').innerHTML = `<p>${project.testing}</p>`;
-    }
-
-    if (project.learned) {
-      document.getElementById('learnedCard').style.display = '';
-      document.getElementById('learnedContent').innerHTML = `<p>${project.learned}</p>`;
-    }
-
-  } catch (e) {
-    document.getElementById('projectContent').innerHTML = '<p class="loading-text">Kon project niet laden.</p>';
-  }
-})();
-</script>
+            } catch (e) {
+                container.innerHTML = '<p>Kon project niet laden.</p>';
+            }
+        });
+    </script>
 </body>
 </html>
