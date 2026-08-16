@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const canvas = document.getElementById('dataCanvas');
   if (!canvas) return;
 
+  // Skip on mobile entirely
+  if (window.innerWidth <= 768) return;
+
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
@@ -42,13 +45,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function initParticles() {
     particles = [];
-    const numParticles = Math.floor((width * height) / 15000);
+    // Fewer particles on tablet
+    const density = window.innerWidth <= 1024 ? 25000 : 15000;
+    const numParticles = Math.floor((width * height) / density);
     for (let i = 0; i < numParticles; i++) {
       particles.push(new Particle());
     }
   }
 
+  let animating = true;
+
   function animate() {
+    if (!animating) return;
     ctx.clearRect(0, 0, width, height);
     
     particles.forEach(p => {
@@ -56,26 +64,38 @@ document.addEventListener('DOMContentLoaded', () => {
       p.draw();
     });
 
-    // Draw connections
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = i + 1; j < particles.length; j++) {
-        const dx = particles[i].x - particles[j].x;
-        const dy = particles[i].y - particles[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
+    // Draw connections — skip on tablet for perf
+    if (window.innerWidth > 1024) {
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 120) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(particles[j].x, particles[j].y);
-          ctx.strokeStyle = `rgba(255, 107, 53, ${0.15 * (1 - dist / 120)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
+          if (dist < 120) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(255, 107, 53, ${0.15 * (1 - dist / 120)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
         }
       }
     }
 
     requestAnimationFrame(animate);
   }
+
+  // Pause when tab not visible
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      animating = false;
+    } else {
+      animating = true;
+      animate();
+    }
+  });
 
   initParticles();
   animate();
