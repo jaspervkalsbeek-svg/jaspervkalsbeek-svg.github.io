@@ -423,7 +423,8 @@
       "JavaScript"
     ],
     "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/leadGenerator"
+      "github": "https://github.com/jaspervkalsbeek-svg/leadGenerator",
+      "docs": "https://github.com/jaspervkalsbeek-svg/leadGenerator/tree/main/docs"
     },
     "screenshots": [
       "leadgenerator-dashboard.webp",
