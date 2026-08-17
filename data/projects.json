@@ -377,7 +377,8 @@
     ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital",
-      "site": "https://vankalsbeekdigital.com"
+      "site": "https://vankalsbeekdigital.com",
+      "docs": "https://vankalsbeekdigital.com/docs/"
     },
     "screenshots": [
       "vankalsbeekdigital-home.webp",
