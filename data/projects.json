@@ -26,6 +26,7 @@
     ],
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo",
+      "site": "https://arbo-advies.info",
       "docs": "https://github.com/jaspervkalsbeek-svg/arbo-adviesburo/tree/main/docs"
     },
     "screenshots": [
@@ -375,10 +376,12 @@
       "JavaScript"
     ],
     "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital",
       "site": "https://vankalsbeekdigital.com"
     },
     "screenshots": [
-      "vankalsbeekdigital-home.webp"
+      "vankalsbeekdigital-home.webp",
+      "vankalsbeekdigital-mobile.webp"
     ],
     "category": "web",
     "year": 2026,
@@ -386,6 +389,48 @@
     "role": "Eindverantwoordelijk voor het volledige ontwerp, de realisatie en de bedrijfsvoering. Alle keuzes (positionering, design, techniek, content) zelf gemaakt.",
     "testing": "Responsief getest op desktop, tablet en mobiel. Navigatie gecontroleerd op alle pagina's. Contactlinks (e-mail, telefoon) getest op correcte werking. Cross-browser getest in Chrome en Firefox. Laadtijden gecontroleerd.",
     "learned": "Geleerd om niet alleen als developer te denken, maar ook als ondernemer: wat is de propositie, hoe presenteer ik mijn diensten, en hoe zorg ik dat een bezoeker weet wat hij kan verwachten. Het formuleren van drie conceptniveaus dwong om mijn diensten concreet te maken."
+  },
+  {
+    "id": "leadgenerator",
+    "title": "LeadGenerator",
+    "subtitle": "Automatische lead-ops voor lokale bedrijven",
+    "description": "Een lokale tool die automatisch bedrijven opspoort met verouderde websites, ze technisch beoordeelt op 6 scoreblokken, screenshots maakt en een mail-concept genereert. Inclusief CRM-dashboard met statusflow, bellijst en contactlog. Gebouwd met Python, draait lokaal op Windows.",
+    "tags": [
+      "Python",
+      "Playwright",
+      "SQLite",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "features": [
+      "Automatische bedrijfsopsporing via DuckDuckGo-zoekopdrachten per branche en plaats",
+      "Technische analyse: HTTPS, laadtijd, paginagrootte, CMS-detectie, alt-teksten, SEO-meta, domeinleeftijd via RDAP",
+      "Gewogen scoringssysteem (6 blokken: actualiteit, mobiel, techniek, prestaties, toegankelijkheid, seo) totaal 0-100",
+      "Playwright screenshots op desktop (1280px) en mobiel (390px)",
+      "Automatisch mail-concept: compliment + 3 aandachtspunten + uitnodiging",
+      "CRM-dashboard met statusflow (nieuw > beoordeeld > mail-concept > mail_verzonden > bellijst > akkoord/nee)",
+      "Bellijst met follow-up na 7 dagen zonder gehoor",
+      "NS-vertrekbord design: matzwart bord, amber signaalkleur, flap-animatie bij statuswijziging",
+      "Alles lokaal in SQLite, geen cloud of betaalde API's"
+    ],
+    "techStack": [
+      "Python",
+      "Playwright",
+      "SQLite",
+      "DuckDuckGo",
+      "HTML/CSS",
+      "JavaScript"
+    ],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/leadGenerator"
+    },
+    "screenshots": [],
+    "category": "web",
+    "year": 2026,
+    "approach": "Eerst het product ontworpen: welke bedrijven wil ik vinden, wat is een goede lead, en hoe automatiseer ik het oprolbare maar hou ik de menselijke oordelen bij de mens. Technisch ontwerp: Python backend met Playwright voor screenshots, SQLite voor dataopslag, lokaal draaiende webserver op poort 8765. Scoringssysteem opgezet met 6 blokken en gewogen totaalscore. CRM-flow ontworpen met statusstappen die de werkelijke verkoopcyclus weerspiegelen. NS-vertrekbord als designreferentie gekozen voor een dense, operate-gerichte interface.",
+    "role": "Eindverantwoordelijk voor het volledige project: productontwerp, technisch ontwerp, alle code (Python backend, Playwright scraping, SQLite database, frontend dashboard), scoringssysteem en CRM-flow.",
+    "testing": "Bedrijfsopsporing getest op verschillende branches en steden. Scoringssysteem gecontroleerd door handmatig sites te beoordelen en de scores te vergelijken. Playwright screenshots getest op desktop en mobiel viewports. CRM-statusflow getest op alle overgangen. Mail-concepten gecontroleerd op inhoud en toon. Performance getest met grotere datasets.",
+    "learned": "Geleerd om een tool te bouwen die het zware opsporingswerk automatiseert terwijl de menselijke oordelen bewust bij de mens blijven. Het NS-vertrekbord als designreferentie was een bewuste keuze om een operate-oppervlak te maken in plaats van een standaard SaaS-dashboard. Ook geleerd om Playwright in te zetten voor geautomatiseerde screenshots en hoe je een lokaal scoringssysteem opzet zonder externe AI-afhankelijkheden."
   },
   {
     "id": "eyelash-correction",
