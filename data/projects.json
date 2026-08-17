@@ -425,7 +425,10 @@
     "links": {
       "github": "https://github.com/jaspervkalsbeek-svg/leadGenerator"
     },
-    "screenshots": [],
+    "screenshots": [
+      "leadgenerator-dashboard.webp",
+      "leadgenerator-detail.webp"
+    ],
     "category": "web",
     "year": 2026,
     "approach": "Eerst het product ontworpen: welke bedrijven wil ik vinden, wat is een goede lead, en hoe automatiseer ik het oprolbare maar hou ik de menselijke oordelen bij de mens. Technisch ontwerp: Python backend met Playwright voor screenshots, SQLite voor dataopslag, lokaal draaiende webserver op poort 8765. Scoringssysteem opgezet met 6 blokken en gewogen totaalscore. CRM-flow ontworpen met statusstappen die de werkelijke verkoopcyclus weerspiegelen. NS-vertrekbord als designreferentie gekozen voor een dense, operate-gerichte interface.",
