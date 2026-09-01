@@ -1,5 +1,58 @@
 [
   {
+    "id": "vankalsbeekdigital",
+    "title": "Van Kalsbeek Digital",
+    "subtitle": "Bedrijfswebsite voor eigen digital agency",
+    "description": "Eigen onderneming: Van Kalsbeek Digital bouwt websites, webapplicaties en data-gedreven tools op maat. De website dient als visitekaartje en leadmachine, met een meertraps intake-formulier, drie pricing tiers (Essential, Pro, Ultimate) voor zowel nieuwe sites als redesigns, een onderhoudsabonnement, en een uitgebreide FAQ. Light/dark theme, Schema.org structuurdata, en een cookie banner.",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Formspree",
+      "Schema.org",
+      "Light/Dark Theme"
+    ],
+    "features": [
+      "Light/dark theme toggle met localStorage-onthouding en systeemvoorkeur-detectie",
+      "Animated text rotator in de hero sectie",
+      "Drie pricing tiers (Essential, Pro, Ultimate) voor zowel nieuwe sites als redesigns",
+      "Meertraps intake-formulier (5 stappen) met voortgangsbalk en Formspree-integratie",
+      "Stapsgewijze werkwijze (Bespreken, Bouwen, Live zetten)",
+      "Tech stack sectie (HTML5, CSS3, JavaScript)",
+      "\"Waarom bijhouden?\" sectie met bewijsdata (SEO, snelheid, beveiliging)",
+      "Onderhoudsabonnement sectie (€15/maand, eerste maand gratis)",
+      "FAQ sectie met 6 veelgestelde vragen",
+      "Testimonial van eerste klant",
+      "Portfolio-sectie met doorverwijzing naar arbo-advies.info",
+      "Schema.org LocalBusiness structuurdata voor SEO",
+      "Cookie banner met akkoord/weiger opties",
+      "Responsive layout voor mobiel, tablet en desktop",
+      "Privacy & voorwaarden pagina"
+    ],
+    "techStack": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Formspree",
+      "Schema.org"
+    ],
+    "links": {
+      "github": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital",
+      "site": "https://vankalsbeekdigital.com",
+      "docs": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital/tree/main/docs"
+    },
+    "screenshots": [
+      "vankalsbeekdigital-home.webp",
+      "vankalsbeekdigital-mobile.webp"
+    ],
+    "category": "web",
+    "year": 2026,
+    "approach": "Eerst de positionering bepaald: wat bied ik aan, voor wie, en hoe presenteer ik dat duidelijk. De eerste versie was een donker thema met basissecties. Na live-gang geanalykt wat er beter kon: light/dark theme voor bredere doelgroep, een meertraps intake-formulier om leads te kwalificeren, en een onderhoudsabonnement als terugkerende omzet. De redesign volledig opnieuw opgebouwd met CSS custom properties voor theming, een gestapeld intake-formulier met voortgangsbalk, en Schema.org structuurdata voor SEO. Bewust gekozen voor statische HTML/CSS/JS zonder framework voor snelle laadtijden en lage hostingkosten.",
+    "role": "Eindverantwoordelijk voor het volledige ontwerp, de realisatie, de bedrijfsvoering en de iteratieve verbeteringen. Alle keuzes (positionering, design, techniek, content, pricing) zelf gemaakt.",
+    "testing": "Responsief getest op desktop, tablet en mobiel. Light/dark theme getest op systeemvoorkeur en handmatige toggle. Intake-formulier getest op alle 5 stappen met formuliervalidatie. Formspree-integratie getest op correcte formulierversending. Navigatie gecontroleerd op alle pagina's. Cross-browser getest in Chrome en Firefox. Schema.org structuurdata gevalideerd via Google Rich Results Test. Cookie banner getest op akkoord/weiger en localStorage-onthouding.",
+    "learned": "Geleerd om niet alleen als developer te denken, maar ook als ondernemer: wat is de propositie, hoe presenteer ik mijn diensten, en hoe zorg ik dat een bezoeker weet wat hij kan verwachten. De iteratieve aanpak (eerst basic, dan uitbreiden op basis van feedback) was essentieel. Het meertraps intake-formulier dwong om na te denken over leadkwalificatie: welke informatie heb ik echt nodig van een potentiële klant? Light/dark theme implementeren met CSS custom properties en localStorage was een leerzame ervaring in browser-side theming."
+  },
+  {
     "id": "arbo-adviesburo",
     "title": "Arbo Adviesburo Van Kalsbeek",
     "subtitle": "Bedrijfswebsite voor arbo-adviesbureau",
@@ -349,47 +402,6 @@
     "role": "Eindverantwoordelijk voor het volledige project. Zelf de API-integratie, hetspelmechanisme en het score-systeem gebouwd.",
     "testing": "Spel getest door meerdere rondes te spelen en te controleren of: willekeurige locities correct werden geladen, de kaart correct reageerde op klikken, de afstandsberekening klopte (vergeleken met Google Maps afstandsmeting), het score-systeem eerlijke punten toekende. Responsive getest op mobiel.",
     "learned": "Geleerd om te werken met een externe API (Google Maps JavaScript API). Geleerd om het Haversine-formulier te implementeren voor afstandsberekening op een boloppervlak. Ook geleerd om een spelmechanisme te ontwerpen met duidelijke feedback voor de gebruiker."
-  },
-  {
-    "id": "vankalsbeekdigital",
-    "title": "Van Kalsbeek Digital",
-    "subtitle": "Bedrijfswebsite voor eigen digital agency",
-    "description": "Eigen onderneming: Van Kalsbeek Digital bouwt websites, webapplicaties en data-gedreven tools op maat. De website dient als visitekaartje en portfolio, met een duidelijke dienststructuur (drie concepten: Minimum, Pro, Ultimate), werkwijze, en contactmogelijkheden. Van eerste idee tot productie.",
-    "tags": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Responsive Design"
-    ],
-    "features": [
-      "Donker thema met strakke, professionele uitstraling",
-      "Drie conceptniveaus (Minimum, Pro, Ultimate) met prijsindicatie",
-      "Stapsgewijze werkwijze (Bespreken, Bouwen, Live zetten)",
-      "Portfolio-sectie met doorverwijzing naar bestaande projecten",
-      "Contactsectie met e-mail, telefoon en locatie",
-      "Responsive layout voor mobiel, tablet en desktop",
-      "Privacy & voorwaarden pagina"
-    ],
-    "techStack": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "links": {
-      "github": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital",
-      "site": "https://vankalsbeekdigital.com",
-      "docs": "https://github.com/jaspervkalsbeek-svg/vanKalsbeekDigital/tree/main/docs"
-    },
-    "screenshots": [
-      "vankalsbeekdigital-home.webp",
-      "vankalsbeekdigital-mobile.webp"
-    ],
-    "category": "web",
-    "year": 2026,
-    "approach": "Eerst nagedacht over de positionering: wat bied ik aan, voor wie, en hoe presenteer ik dat duidelijk. De website moest professionaliteit uitstralen zonder overbodige tierelantijnen. Drie conceptniveaus gekozen zodat klanten direct zien wat er mogelijk is. De werkwijze stapsgewijs weergegeven om vertrouwen te kweken. Technisch ontwerp: statische HTML/CSS/JS voor snelle laadtijden en lage hostingkosten.",
-    "role": "Eindverantwoordelijk voor het volledige ontwerp, de realisatie en de bedrijfsvoering. Alle keuzes (positionering, design, techniek, content) zelf gemaakt.",
-    "testing": "Responsief getest op desktop, tablet en mobiel. Navigatie gecontroleerd op alle pagina's. Contactlinks (e-mail, telefoon) getest op correcte werking. Cross-browser getest in Chrome en Firefox. Laadtijden gecontroleerd.",
-    "learned": "Geleerd om niet alleen als developer te denken, maar ook als ondernemer: wat is de propositie, hoe presenteer ik mijn diensten, en hoe zorg ik dat een bezoeker weet wat hij kan verwachten. Het formuleren van drie conceptniveaus dwong om mijn diensten concreet te maken."
   },
   {
     "id": "leadgenerator",
